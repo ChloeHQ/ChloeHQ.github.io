@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/navigator/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bk010.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >CSS Positioning（定位）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="CSS-Positioning-定位"><a href="#CSS-Positioning-定位" class="headerlink" title="CSS Positioning 定位"></a>CSS Positioning 定位</h2><blockquote>
+<p>CSS元素可以使用顶部、右侧、底部和左侧(top,right,bottom,left)属性定位，然而这些属性要在设定了position属性后才能工作，依据不同的定位方法有不同的显示效果。  </p>
+</blockquote>
+<hr>
+<p><strong>position的5个值:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">static</td>
+<td style="text-align:left">默认值，没有定位，元素出现在正常流中（忽略top,right,bottom,left或者z-index声明）</td>
+</tr>
+<tr>
+<td style="text-align:center">relative</td>
+<td style="text-align:left"><strong>相对定位</strong>，相比其正常应出现的位置进行定位，通过通过“T-R-B-L”改变元素所在位置</td>
+</tr>
+<tr>
+<td style="text-align:center">absolute</td>
+<td style="text-align:left">生成<strong>绝对定位</strong>的元素，相对于static定位以外的第一个父元素定位</td>
+</tr>
+<tr>
+<td style="text-align:center">fixed</td>
+<td style="text-align:left">固定位置，相对于浏览器窗口定位，即使窗口滑动也不会移动</td>
+</tr>
+</tbody>
+</table>
+<p>本文以实例布局来说明几种定位方法。  </p>
+<h6 id="HTML-Code"><a href="#HTML-Code" class="headerlink" title="HTML Code"></a>HTML Code</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=&quot;example&quot;&gt;</span><br><span class="line">	&lt;div id=&quot;div-before&quot;&gt;</span><br><span class="line">		&lt;p&gt;id = div-before&lt;/p&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;div id=&quot;div-1&quot;&gt;</span><br><span class="line">		&lt;div id=&quot;div-1-padding&quot;&gt;</span><br><span class="line">			&lt;p&gt;id = div-1&lt;/p&gt;</span><br><span class="line">			&lt;div id=&quot;div-1a&quot;&gt;</span><br><span class="line">				&lt;p&gt;id = div-1a&lt;/p&gt;</span><br><span class="line">				&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. &lt;/p&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div id=&quot;div-1b&quot;&gt;</span><br><span class="line">				&lt;p&gt;id = div-1b&lt;/p&gt;</span><br><span class="line">				&lt;p&gt;Phasellus ultrices viverra velit. Nam mattis, arcu ut.&lt;/p&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div id=&quot;div-1c&quot;&gt;</span><br><span class="line">				&lt;p&gt;id = div-1c&lt;/p&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;div id=&quot;div-after&quot;&gt;</span><br><span class="line">		&lt;p&gt;id = div-after&lt;/p&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="CSS-Code"><a href="#CSS-Code" class="headerlink" title="CSS Code"></a>CSS Code</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">	#example &#123;</span><br><span class="line">		float: right;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	#example p &#123;</span><br><span class="line">		margin: 0 0.25em;</span><br><span class="line">		padding: 0.25em 0;</span><br><span class="line">	&#125;</span><br><span class="line">	#div-before,</span><br><span class="line">	#div-after &#123;</span><br><span class="line">		background-color: #878787;</span><br><span class="line">		color: #000;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	#div-1 &#123;</span><br><span class="line">		width: 400px;</span><br><span class="line">		background-color: #000;</span><br><span class="line">		color: #fff;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	#div-1-padding &#123;</span><br><span class="line">		padding: 10px;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	#div-1a &#123;</span><br><span class="line">		background-color: #ff6a6a;</span><br><span class="line">		color: #fff;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	#div-1b &#123;</span><br><span class="line">		background-color: #9bcd9b;</span><br><span class="line">		color: #fff;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	#div-1c &#123;</span><br><span class="line">		background-color: #8db6cd;</span><br><span class="line">		color: #fff;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="初步布局效果："><a href="#初步布局效果：" class="headerlink" title="初步布局效果："></a>初步布局效果：</h6><p><img src="http://oz572skeg.bkt.clouddn.com/css_position0.png" alt="initial_position">  </p>
+<h4 id="一、相对定位relative"><a href="#一、相对定位relative" class="headerlink" title="一、相对定位relative"></a>一、相对定位relative</h4><p><strong>relative</strong>称为相对定位，如果给某个元素指定了postion的值为“relative”，那么就可以通过“T-R-B-L”(也就是top,right,bottom,left)来设置元素的定位值。</p>
+<p><strong>使用relative时有几点需要注意</strong>：</p>
+<p>(1)元素设置了relative时，是相对于元素<strong>本身位置</strong>进行定位；<br>(2)元素设置了relative后，可以通过“T-R-B-L”改变元素当前所在的位置，但元素移位后，同样<strong>占有当初的物理空间位</strong>；<br>(3)元素设置了relative后，如果没有进行任何的“T-R-B-L”设置，元素不会进行任何位置改变。</p>
+<p>对于(2)的理解：<br>在上面的基础上，对<strong>div-1</strong>向下移动20px,向左移动40px:<br><strong>CSS Code</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#div-1 &#123;</span><br><span class="line">	position:relative;</span><br><span class="line">	top:20px;</span><br><span class="line">	left:-40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position1.png" alt="relative_position"><br>从效果图中可见div-1向下移动了20px,向左移动了40px。本身的位置变化了，原来的物理空间仍然存在；元素位置变化后并没有影响相邻的元素。  </p>
+<h4 id="二、绝对定位absolute"><a href="#二、绝对定位absolute" class="headerlink" title="二、绝对定位absolute"></a>二、绝对定位absolute</h4><p>如果给元素position属性赋值absolute，整个元素会脱离文档流，并且元素自身的物理空间会消失，这一点与relative不同。<br>举个例子，对<strong>div-1a</strong>进行绝对定位：<br><strong>CSS Code</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#div-1a&#123;</span><br><span class="line">	position:absolute;</span><br><span class="line">	top:0;</span><br><span class="line">	right:0;</span><br><span class="line">	width:200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position2.png" alt="absolute_position"><br>此时div-1a不在文档流中，其原来的物理空间也不存在了，且定位相对于html来定位。<br>如果元素div-1a想在div-1中进行绝对定位，那要怎么办呢？此时就要发挥前面“relative”的作用了。  </p>
+<h4 id="三、relative与absolute结合使用"><a href="#三、relative与absolute结合使用" class="headerlink" title="三、relative与absolute结合使用"></a>三、relative与absolute结合使用</h4><p><strong>absolute绝对定位元素的位置相对于最近的</strong>已定位<strong>(fixed,relative,absolute)父元素，如果元素没有已定位的父元素，那么它的位置相对于HTML</strong><br>如果一个元素绝对定位后，其参照物是以离自身最近元素是否设置了相对定位，如果有设置将以离自己最近元素定位，如果没有将往其祖先元素寻找相对定位元素，一直找到html为止。  </p>
+<h6 id="1、对div-1添加relative定位，对div-1a进行绝对定位："><a href="#1、对div-1添加relative定位，对div-1a进行绝对定位：" class="headerlink" title="1、对div-1添加relative定位，对div-1a进行绝对定位："></a>1、对<strong>div-1</strong>添加relative定位，对<strong>div-1a</strong>进行绝对定位：</h6><p><strong>CSS Code:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#div-1&#123;</span><br><span class="line">	position: relative;</span><br><span class="line">&#125;</span><br><span class="line">#div-1a&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 0;</span><br><span class="line">	right: 0;</span><br><span class="line">	width: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果:</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position3.png" alt="absolute&amp;relative组合">  </p>
+<h6 id="2、div-1进行相对定位，而div-1a、div-1b进行绝对定位，实现两列布局效果："><a href="#2、div-1进行相对定位，而div-1a、div-1b进行绝对定位，实现两列布局效果：" class="headerlink" title="2、div-1进行相对定位，而div-1a、div-1b进行绝对定位，实现两列布局效果："></a>2、<strong>div-1</strong>进行相对定位，而<strong>div-1a</strong>、<strong>div-1b</strong>进行绝对定位，实现两列布局效果：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#div-1&#123;</span><br><span class="line">	position: relative;</span><br><span class="line">&#125;</span><br><span class="line">#div-1a&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 0;</span><br><span class="line">	right: 0;</span><br><span class="line">	width: 200px;</span><br><span class="line">&#125;</span><br><span class="line">#div-1b&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 0;</span><br><span class="line">	left: 0;</span><br><span class="line">	width: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>显示效果:</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position3-1.png" alt="absolute&amp;relative组合"><br>这样的制作只是用来说明absolute的作用，如果只能实现上面的效果，可能在实际制作中并不完美，为了让其更完美一些，在这个基础上我们在来看下面这一步。 </p>
+<h6 id="3、设置固定高度"><a href="#3、设置固定高度" class="headerlink" title="3、设置固定高度"></a>3、设置固定高度</h6><p>为了让布局更适用，可以在 div-1 上设置固定高度：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#div-1&#123;</span><br><span class="line">	position: relative;</span><br><span class="line">	height: 180px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果:</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position3-2.png" alt="a父元素高度固定">  </p>
+<p>相比之下会好一点，但我们并不知道元素内容高度将会是多少，所以不建议设置固定高度。如果为了需要，我们可以通过别的办法来实现。  </p>
+<blockquote>
+<p><a href="http://blog.jobbole.com/49320/" target="_blank" rel="external">参考博客：十步图解CSS的position</a>  </p>
+</blockquote>
+<h6 id="4、float"><a href="#4、float" class="headerlink" title="4、float"></a>4、float</h6><p>①可以在一个元素上使用float，让元素向左或向右：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#div-1a&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 200px;</span><br><span class="line">&#125;</span><br><span class="line">#div-1b&#123;</span><br><span class="line">	background-color: #9bcd9b;</span><br><span class="line">	color: #fff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果:</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position4-1.png" alt="单元素浮动">  </p>
+<p>②多列浮动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#div-1a&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 150px;</span><br><span class="line">&#125;</span><br><span class="line">#div-1b&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 150px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果:</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position4-2.png" alt="多列浮动">  </p>
+<p>浮动相比绝对定位，解决了高度自适应的问题，但是却产生了新的问题，破坏了原有的文档流，使其父元素塌陷。<strong>为解决此问题，有必要清除浮动</strong>  </p>
+<p>③清除浮动<br><strong>为了使浮动元素的父元素不再处于塌陷的状态，需要清除浮动：</strong><br>(1)使用带clear属性的空元素<br>在浮动元素后使用一个空元素（如 div, hr, br)，并在CSS中赋予clear:both;属性即可清理浮动。<br>无语义的html元素，代码不够优雅，后期不易维护。<br>优点：简单、代码少，浏览器兼容性好。<br>缺点：需要添加大量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#div-1a&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 150px;</span><br><span class="line">&#125;</span><br><span class="line">#div-1b&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 150px;</span><br><span class="line">&#125;</span><br><span class="line">#div-1c&#123;</span><br><span class="line">	clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>显示效果:</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position4-3.png" alt="清除浮动1">  </p>
+<p>(2)使用CSS的overflow属性<br>给浮动元素的容器添加overflow:hidden;或overflow:auto;可以清除浮动，另外在IE6中还需要出发hasLayout，例如为父元素设置容器宽高或设置 zoom:1。<br>添加overflow属性后，浮动元素又回到了容器层，把容器高度撑起，达到清除浮动的作用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#div-1&#123;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	*zoom: 1;</span><br><span class="line">&#125;</span><br><span class="line">#div-1a&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 150px;</span><br><span class="line">&#125;</span><br><span class="line">#div-1b&#123;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 150px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果：</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position4-4.png" alt="清除浮动2"><br>(3)给浮动元素的容器添加浮动<br>给浮动元素的容器也添加上浮动元素属性即可清除内部浮动，但这样会使其整体浮动，影响布局，不推荐。<br>(4)使用邻接元素处理<br>什么都不做，给浮动元素后面的元素添加clear属性。<br>(5)使用CSS的:after伪元素<br>after伪元素指一个元素之后最近的元素<br>给浮动元素的容器添加一个 cearfix 的 class，然后给这个 class 添加一个 :after 伪元素实现元素末尾添加一个看不见的块元素清除浮动。<br>通过CSS伪元素在容器的内部元素最后添加了一个看不见的空格”020”或点”.”，并且赋予clear属性来清除浮动。需要注意的是为了IE6和IE7浏览器，要给clearfix这个class添加一条zoom:1;触发haslayout。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//css</span><br><span class="line">.clearfix:after&#123;</span><br><span class="line">	content: &quot;020&quot;;</span><br><span class="line">	display: block;</span><br><span class="line">	height: 0;</span><br><span class="line">	clear: both;</span><br><span class="line">	visibility: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">  /* 触发 hasLayout */ </span><br><span class="line">  zoom: 1; </span><br><span class="line">  &#125;</span><br><span class="line">//html</span><br><span class="line">&lt;div id=&quot;div-1&quot; class=&apos;clearfix&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示效果：</strong><br><img src="http://oz572skeg.bkt.clouddn.com/css_position4-5.png" alt="清除浮动3">  </p>
+<p><strong>总结</strong>  </p>
+<p>通过上面的例子，我们不难发现清除浮动的方法可以分成两类：  </p>
+<p>一是利用 clear 属性，包括在浮动元素末尾添加一个带有 clear: both 属性的空 div 来闭合元素，其实利用 :after 伪元素的方法也是在元素末尾添加一个内容为一个点并带有 clear: both 属性的元素实现的。  </p>
+<p>二是触发浮动元素父元素的 BFC (Block Formatting Contexts, 块级格式化上下文)，使到该父元素可以包含浮动元素。  </p>
+<p><strong>推荐</strong></p>
+<ul style="list-style-type:square"><br>    <li>在网页主要布局时使用:after伪元素方法并作为主要清理浮动方式；</li><br>    <li>在小模块如ul里使用overflow:hidden;（留意可能产生的隐藏溢出元素问题）；</li><br>    <li>如果本身就是浮动元素则可自动清除内部浮动，无需格外处理；</li><br>    <li>正文中使用邻接元素清理之前的浮动。</li><br>    <li>最后可以使用相对完美的:after伪元素方法清理浮动，文档结构更加清晰。</li><br></ul>
+
+
+
+
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2017/11/28/css_position/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2017/11/28/css_position/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

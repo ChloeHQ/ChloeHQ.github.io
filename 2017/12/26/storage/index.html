@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/navigator/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bk004.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >cookie,localStorage和sessionStorage的区别</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="cookie-localStorage和sessionStorage的区别"><a href="#cookie-localStorage和sessionStorage的区别" class="headerlink" title="cookie,localStorage和sessionStorage的区别"></a>cookie,localStorage和sessionStorage的区别</h2><h4 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h4><h6 id="（1）cookie"><a href="#（1）cookie" class="headerlink" title="（1）cookie"></a>（1）cookie</h6><blockquote>
+<blockquote>
+<p>指某些网站为了辨别用户身份、进行 session 跟踪而储存在用户本地终端上的数据（通常经过加密）<br>cookie（小甜饼）大小限制在4K，其主要用途有保存登录信息，比如登录摸个网站可以看到“记住密码”，这通常就是通过在cookie中存入一段辨别用户身份的数据来实现的。<br>cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。  </p>
+<h6 id="（2）localStorage"><a href="#（2）localStorage" class="headerlink" title="（2）localStorage"></a>（2）localStorage</h6><p><strong>HTML5新加入</strong>，被大多数浏览器支持  </p>
+<h6 id="（3）sessionStorage"><a href="#（3）sessionStorage" class="headerlink" title="（3）sessionStorage"></a>（3）sessionStorage</h6><p>与localStorage接口类似，但保存数据的生命周期与localStorage不同。<br>sessionStorage是一个前端概念，只可以将一部分数据在当前会话中保存下来，刷新页面数据依旧存在，但页面关闭后，sessionStorage中的数据就会被清空。  </p>
+</blockquote>
+</blockquote>
+<h4 id="二、三者异同"><a href="#二、三者异同" class="headerlink" title="二、三者异同"></a>二、三者异同</h4><h6 id="（1）共同点"><a href="#（1）共同点" class="headerlink" title="（1）共同点"></a>（1）共同点</h6><p>用于存储用户数据，都保存在浏览器端（客户端），是同源的。<br><strong>同源：</strong><br>就是域名必须一样。cookie涉及到跨域的问题，不同浏览器下用不同的方法是能让cookie跨域的。localStorage sessionStorage 就非常严格，子域名不能跨，http和https更不能跨。  </p>
+<h6 id="（2）不同点"><a href="#（2）不同点" class="headerlink" title="（2）不同点"></a>（2）不同点</h6><table>
+<thead>
+<tr>
+<th style="text-align:center">特性</th>
+<th style="text-align:center">cookie</th>
+<th style="text-align:center">localStorage</th>
+<th style="text-align:center">sessionStorage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数据生命周期</td>
+<td style="text-align:center">一般由服务器生成，可设置expire失效时间；如果在浏览器端生成，默认关闭浏览器后失效</td>
+<td style="text-align:center">除非被清除否则永久保存</td>
+<td style="text-align:center">仅在当前会话下有效，关闭页面或浏览器会被清除</td>
+</tr>
+<tr>
+<td style="text-align:center">存放数据大小</td>
+<td style="text-align:center">不超过4K</td>
+<td style="text-align:center">一般为5MB</td>
+<td style="text-align:center">一般为5MB</td>
+</tr>
+<tr>
+<td style="text-align:center">与服务器端通信</td>
+<td style="text-align:center">每次都被携带在http头中，在浏览器和服务器间来回传递</td>
+<td style="text-align:center">仅在客户端保存不参与服务器通信</td>
+<td style="text-align:center">仅在客户端保存不参与服务器通信</td>
+</tr>
+<tr>
+<td style="text-align:center">易用性</td>
+<td style="text-align:center">需程序员封装，原生接口不友好</td>
+<td style="text-align:center">原生接口可接受，亦可再次封装</td>
+<td style="text-align:center">原生接口可接受，亦可再次封装</td>
+</tr>
+<tr>
+<td style="text-align:center">作用域</td>
+<td style="text-align:center">在所有同源窗口中共享</td>
+<td style="text-align:center">在所有同源窗口中共享</td>
+<td style="text-align:center">不在不同浏览器窗口中共享</td>
+</tr>
+</tbody>
+</table>
+<h4 id="三、cookie的操作"><a href="#三、cookie的操作" class="headerlink" title="三、cookie的操作"></a>三、cookie的操作</h4><h6 id="1-设置cookie"><a href="#1-设置cookie" class="headerlink" title="(1)设置cookie"></a>(1)设置cookie</h6><p>内容：采用key=value;key=value…的方式存储，参数名自定义<br>过期时间：expires参数<br>路径： path参数，’/‘表示这个网站的页面<br><strong>实例：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"chloe"</span>;</span><br><span class="line"><span class="keyword">var</span> pwd = <span class="string">"111111"</span>;</span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">now.setTime(now.getTime() + <span class="number">1</span>*<span class="number">24</span>*<span class="number">3600</span>*<span class="number">1000</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="string">"/"</span>;</span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"name="</span> + name + <span class="string">";expires="</span> + now.toUTCString() + <span class="string">";path="</span> + path;<span class="comment">//姓名</span></span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"pwd="</span> + pwd +<span class="string">";expires="</span> + now.toUTCString() + <span class="string">";path="</span> + path;<span class="comment">//密码</span></span><br></pre></td></tr></table></figure></p>
+<h6 id="2-读取cookie"><a href="#2-读取cookie" class="headerlink" title="(2)读取cookie"></a>(2)读取cookie</h6><pre><code>var data = document.cookie;
+</code></pre><h6 id="3-截取字符串"><a href="#3-截取字符串" class="headerlink" title="(3)截取字符串"></a>(3)截取字符串</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function getKey(key)&#123;</span><br><span class="line">       var cdata = document.cookie;</span><br><span class="line">       var findStr = key + &quot;=&quot;;</span><br><span class="line">       var index = cdata.indexOf(findStr);</span><br><span class="line">       if(index == -1)</span><br><span class="line">           return null;</span><br><span class="line">       var subStr = cdata.substring(index + findStr.length);</span><br><span class="line">       var lastIndex = subStr.indexOf(&quot;;&quot;);</span><br><span class="line">       if(lastIndex == -1)</span><br><span class="line">           return subStr;</span><br><span class="line">       else</span><br><span class="line">           return subStr.substring(0,lastIndex);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h6 id="3-清除cookie"><a href="#3-清除cookie" class="headerlink" title="(3)清除cookie"></a>(3)清除cookie</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var name = null;</span><br><span class="line">var pwd = null;</span><br><span class="line">var now = new Date();</span><br><span class="line">var path = &quot;/&quot;;</span><br><span class="line">document.cookie = &quot;name=&quot; + name +&quot;;expires=&quot; + now.toUTCString() + &quot;;path=&quot; + path;//姓名</span><br><span class="line">document.cookie = &quot;pwd=&quot; + pwd +&quot;;expires=&quot; + now.toUTCString() + &quot;;path=&quot; + path;//密码</span><br></pre></td></tr></table></figure>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2017/12/26/storage/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2017/12/26/storage/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

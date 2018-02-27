@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/navigator/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bk008.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >正则表达式Regex</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="RegExp表达式"><a href="#RegExp表达式" class="headerlink" title="RegExp表达式"></a>RegExp表达式</h2><h4 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h4><p>RegExp(regular expression)对象用于存储一种检索模式，是对字符串执行模式匹配的强有力的工具。<br><strong>直接量语法和创建RegExp对象两种方法：</strong>  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(pattern, attributes);</span><br><span class="line"><span class="comment">//RegExp对象。参数就是制定的规则。* 有一种情况必须用这种方式,下面会提到。* </span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/pattern/</span>attributes;   <span class="comment">// 简写方法,性能更好,*不加引号。</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中参数<strong>pattern</strong>是一个指定了正则表达式模式的字符串，或其他正则表达式；<br>参数<strong>attributes</strong>是修饰符，是一个可选的字符串   </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">修饰符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:left">(global)执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。  </td>
+</tr>
+<tr>
+<td style="text-align:center">i</td>
+<td style="text-align:left">(ignoreCase)大小写不敏感</td>
+</tr>
+<tr>
+<td style="text-align:center">m</td>
+<td style="text-align:left">(multiline)执行多行匹配</td>
+</tr>
+</tbody>
+</table>
+<h4 id="二、正则表达式各符号含义"><a href="#二、正则表达式各符号含义" class="headerlink" title="二、正则表达式各符号含义"></a>二、正则表达式各符号含义</h4><h5 id="1、元字符"><a href="#1、元字符" class="headerlink" title="1、元字符"></a>1、元字符</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:center">元字符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:left">匹配单个字符，除了换行和行结束符</td>
+<td style="text-align:center">\n</td>
+<td style="text-align:left">匹配换行符</td>
+</tr>
+<tr>
+<td style="text-align:center">\.</td>
+<td style="text-align:left">匹配真正的.</td>
+<td style="text-align:center">\0</td>
+<td style="text-align:left">匹配null字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:left">匹配单词字符（字母 ，数字，下划线_ ）</td>
+<td style="text-align:center">\t</td>
+<td style="text-align:left">匹配制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">\W</td>
+<td style="text-align:left">匹配非单词字符</td>
+<td style="text-align:center">\v</td>
+<td style="text-align:left">匹配垂直制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:left">匹配数字字符</td>
+<td style="text-align:center">\f</td>
+<td style="text-align:left">匹配换页符</td>
+</tr>
+<tr>
+<td style="text-align:center">\D</td>
+<td style="text-align:left">匹配非数字字符</td>
+<td style="text-align:center">\r</td>
+<td style="text-align:left">匹配回车符</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:left">匹配空白字符</td>
+<td style="text-align:center">\xxx</td>
+<td style="text-align:left">匹配以八进制数 xxx 规定的字符(ascii)</td>
+</tr>
+<tr>
+<td style="text-align:center">\S</td>
+<td style="text-align:left">匹配非空白字符</td>
+<td style="text-align:center">\xdd</td>
+<td style="text-align:left">匹配以十六进制数 xxx 规定的字符(ascii)</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:left">匹配单词边界（ 起始，结束，空格 ）</td>
+<td style="text-align:center">\uxxxx</td>
+<td style="text-align:left">匹配以十六进制数 xxxx 规定的 Unicode 字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\B</td>
+<td style="text-align:left">匹配非单词边界</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="2、量词"><a href="#2、量词" class="headerlink" title="2、量词"></a>2、量词</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">n+</td>
+<td style="text-align:left">匹配包含至少一个n的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">n*</td>
+<td style="text-align:left">0个或多个n</td>
+</tr>
+<tr>
+<td style="text-align:center">n?</td>
+<td style="text-align:left">0个或1个n</td>
+</tr>
+<tr>
+<td style="text-align:center">n{X}</td>
+<td style="text-align:left">X个n的序列</td>
+</tr>
+<tr>
+<td style="text-align:center">n{X,Y}</td>
+<td style="text-align:left">X至Y个n的序列</td>
+</tr>
+<tr>
+<td style="text-align:center">n{X,}</td>
+<td style="text-align:left">至少X个n的序列</td>
+</tr>
+<tr>
+<td style="text-align:center">n$</td>
+<td style="text-align:left">任何以n结尾的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">^n</td>
+<td style="text-align:left">任何以n开头的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">m(?=n)</td>
+<td style="text-align:left">对其后紧跟n的m进行搜索</td>
+</tr>
+<tr>
+<td style="text-align:center">m?!n</td>
+<td style="text-align:left">匹配任何后面没有紧跟n的m</td>
+</tr>
+</tbody>
+</table>
+<h5 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h5><h4 id="三、RegExp对象方法"><a href="#三、RegExp对象方法" class="headerlink" title="三、RegExp对象方法"></a>三、RegExp对象方法</h4><h5 id="1、test"><a href="#1、test" class="headerlink" title="1、test()"></a>1、test()</h5><p><strong> 在字符串中查找符合正则的内容，若查到返回true,反之返回false. </strong><br>用法：</p>
+<pre><code>RegExpObject.test(string);
+</code></pre><h5 id="2、exec"><a href="#2、exec" class="headerlink" title="2、exec()"></a>2、exec()</h5><p><strong> 检索字符串中指定的值。返回一个<strong>数组</strong>，其中存放匹配的结果。如果未找到匹配，则返回值为null。  </strong><br>用法:</p>
+<pre><code>RegExpObject.exec(string);
+</code></pre><p><strong>（1）没有g标志——执行一次匹配</strong><br>此<strong>数组</strong>的第0个元素是与正则表达式相匹配的文本<br>第1个元素是与 RegExpObject 的第1个子表达式相匹配的文本（如果有的话）<br>第2个元素是与 RegExpObject 的第2个子表达式相匹配的文本（如果有的话），以此类推……<br>结果数组的<strong>属性</strong>：<br>index——匹配文本的第1个字符的位置<br>input——存放被检索的字符串 string。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var testStr = &quot;now test001sss test002&quot;;</span><br><span class="line">var re = /test(\d+)(s+)/;		//只匹配一次</span><br><span class="line">var r = re.exec(testStr);</span><br><span class="line">console.log(r);// [&quot;test001s&quot;,&quot;001&quot;,&quot;sss&quot;]    返回匹配结果，以及子项</span><br><span class="line">console.log(r.length); //3   </span><br><span class="line">console.log(r[0]);   //test001sss</span><br><span class="line">console.log(r[1]);  //001      		代表每次匹配成功字符串中的第一个子项 (\d+)</span><br><span class="line">console.log(r[2]); //sss       		代表匹配成功字符串中的第二个子项(s+)</span><br><span class="line">console.log(r.input); //now test001sss test002    存放被检索的字符串string</span><br><span class="line">console.log(r.index );   //  4                    匹配文本的第一个字符的位置</span><br></pre></td></tr></table></figure>
+<p><strong>（2）有g标志</strong><br>可以通过while循环找到每次匹配到的字符串，以及子项。每次匹配都接着上次的位置开始匹配。  </p>
+<h5 id="3、compile"><a href="#3、compile" class="headerlink" title="3、compile()"></a>3、compile()</h5><p><strong>改变或重新编译正则表达式</strong><br>用法：  </p>
+<pre><code>RegExpObject.compile(regexp, modifier);
+//modifier规定匹配的类型。&quot;g&quot; 用于全局匹配，&quot;i&quot; 用于区分大小写，&quot;gi&quot; 用于全局区分大小写的匹配。
+</code></pre><h4 id="四、支持正则表达式的-String-对象的方法"><a href="#四、支持正则表达式的-String-对象的方法" class="headerlink" title="四、支持正则表达式的 String 对象的方法"></a>四、支持正则表达式的 String 对象的方法</h4><h5 id="1、search"><a href="#1、search" class="headerlink" title="1、search()"></a>1、search()</h5><p><strong>检索字符串中与正则表达式相匹配的子字符串。</strong><br>返回stringObject 中第一个与 regexp 相匹配的子串的起始位置，若没有，则返回-1.<br>用法：<br>    stringObject.search(regexp);<br>    //该参数可以是需要在 stringObject 中检索的子串，也可以是需要检索的 RegExp 对象。</p>
+<p><strong>注意：</strong><br>search()方法总是返回第一个匹配的子串，不执行全局匹配（忽略标志g),同时忽略regexp的lastIndex属性，总是从字符串的开始进行检索。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"hi!w3cschool,I like w3cschool"</span>;</span><br><span class="line"><span class="keyword">var</span> res = str1.search(<span class="string">"w3cschool"</span>);</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/w3cschool/g</span>;</span><br><span class="line"><span class="keyword">var</span> res2 = str1.search(reg);</span><br><span class="line"><span class="built_in">console</span>.log(res);   <span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(res2);  <span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.lastIndex);  <span class="comment">//0</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="2、match"><a href="#2、match" class="headerlink" title="2、match()"></a>2、match()</h5><p><strong>在指定字符串中找到一个或多个匹配的子串</strong>（与是否有全局”g”标识有关）<br>用法：<br>    stringObject.match(regexp)<br>    //该参数可以是需要在 stringObject 中检索的子串，也可以是需要检索的 RegExp 对象。</p>
+<p>返回值：存放匹配结果的字符串数组，该数组的内容取决于是否有全局”g”标识。 如果没有任何匹配则返回null。</p>
+<p> <strong>（1）没有g标志——执行一次匹配</strong><br> 该数组的第 0 个元素存放匹配文本，而其余的元素存放的是与正则表达式的子表达式匹配的文本。除了这些常规的数组元素之外，返回的数组还含有两个对象属性。index 属性声明的是匹配文本的起始字符在 stringObject 中的位置，input 属性声明的是对 stringObject 的引用。<br> <strong> （2）有g标志——执行全局匹配 </strong><br>全局匹配返回的数组元素中存放的是 stringObject 中所有的匹配子串，而且也没有 index 属性或 input 属性。<br><strong>注意：</strong><br>在全局检索模式下，match() 既不提供与子表达式匹配的文本的信息，也不声明每个匹配子串的位置。如果您需要这些全局检索的信息，可以使用 RegExp.exec()。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> substr = <span class="string">"001"</span>;</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/(\d)+(\w)*/</span>;</span><br><span class="line"><span class="keyword">var</span> reg_g = <span class="regexp">/(\d)+(\w)*/g</span>;</span><br><span class="line">str_test = <span class="string">"Hello!001ac,002b,003cc,001ddd."</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str_test.match(substr));     <span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(str_test.match(substr));<span class="comment">//["001",index:6,input:"Hello!001a,002b,003cc,001ddd."]</span></span><br><span class="line"><span class="keyword">var</span> arr_res = str_test.match(reg);<span class="keyword">var</span> arr_res_g = str_test.match(reg_g);</span><br><span class="line"><span class="built_in">console</span>.log(arr_res);</span><br><span class="line"><span class="comment">//["001ac", "1", "c", index: 6, input: "Hello!001a,002b,003cc,001ddd."]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr_res_g); </span><br><span class="line"><span class="comment">// ["001ac", "002b", "003cc", "001ddd"]</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="3、replace"><a href="#3、replace" class="headerlink" title="3、replace()"></a>3、replace()</h5><p><strong>查找+替换</strong><br>在指定字符串中用一些字符替换另一些字符，或替换与正则表达式匹配的子串<br>具有全局标志 g，那么 replace() 方法将替换所有匹配的子串；否则只替换第一个匹配子串。<br>用法：<br>    stringObject.replace(regexp|substr, replacement)<br>    //replacement规定了替换文本或函数。</p>
+<p>返回值：用replacement替换了regexp的一个或多个匹配后的字符串。<br>如果具有全局标志 g，那么 replace() 方法将替换所有匹配的子串;否则只替换第一个匹配子串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str_test1,str_test2,str_test3,str_test4;</span><br><span class="line">str_test1 = <span class="string">"我爱北京天安门，天安门上太阳升"</span>;</span><br><span class="line">str_test2 = <span class="string">"我爱北京天安门，天安门上太阳升"</span>;</span><br><span class="line">str_test3 = <span class="string">"我爱北京天安门，天安门上太阳升"</span>;</span><br><span class="line">str_test4 = <span class="string">"我爱北京天安门，天安门上太阳升"</span>;</span><br><span class="line"><span class="keyword">var</span> substr = <span class="string">"天安门"</span>;</span><br><span class="line"><span class="keyword">var</span> replace_str = <span class="string">"*"</span>;</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/(北京|天安门)/</span>;</span><br><span class="line"><span class="keyword">var</span> reg_g = <span class="regexp">/(北京|天安门)/g</span>;</span><br><span class="line"><span class="keyword">var</span> res1 = str_test1.replace(substr,replace_str)</span><br><span class="line"><span class="built_in">console</span>.log(res1);      <span class="comment">//我爱北京*，天安门上太阳升</span></span><br><span class="line"><span class="built_in">console</span>.log(str_test2.replace(reg,replace_str));    <span class="comment">//我爱*天安门，天安门上太阳升</span></span><br><span class="line"><span class="built_in">console</span>.log(str_test3.replace(reg_g,replace_str));  <span class="comment">//我爱**，*上太阳升</span></span><br><span class="line"><span class="built_in">console</span>.log(str_test4.replace(reg_g,<span class="function"><span class="keyword">function</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    alert(str);<span class="comment">//每次匹配成功的字符串。一次str指的是北京 第二次str是天安门 第三次str是天安门</span></span><br><span class="line">    <span class="keyword">var</span> res = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++)&#123;</span><br><span class="line">        res += <span class="string">"*"</span>;<span class="comment">//搜索到了几个字就返回几个*</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;));</span><br><span class="line"><span class="comment">//我爱*****，***上太阳升</span></span><br></pre></td></tr></table></figure></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2017/11/06/regex/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2017/11/06/regex/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
