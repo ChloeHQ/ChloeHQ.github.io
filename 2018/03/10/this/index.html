@@ -116,12 +116,20 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >ABOUT ME</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bb0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >理解JS中this的指向</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <h4 id="一、this指向问题"><a href="#一、this指向问题" class="headerlink" title="一、this指向问题"></a>一、this指向问题</h4><blockquote>
+<p>this的指向只有在函数执行的时候才能够确定，在函数定义阶段并不能确定，this最终指向那个调用它的对象。<br>window是js中的全局对象，我们创建的变量实际上是给window添加属性。  </p>
+<h5 id="1、全局作用域或者普通函数中this指向全局对象window"><a href="#1、全局作用域或者普通函数中this指向全局对象window" class="headerlink" title="1、全局作用域或者普通函数中this指向全局对象window"></a>1、全局作用域或者普通函数中<strong>this</strong>指向全局对象<strong>window</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//直接打印</span><br><span class="line">console.log(this);//window</span><br><span class="line"></span><br><span class="line">//function声明函数  </span><br><span class="line">function bar()&#123;console.log(this)&#125;</span><br><span class="line">bar();//window</span><br><span class="line"></span><br><span class="line">//自执行函数</span><br><span class="line">(function()&#123;console.log(this)&#125;)();//window</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h5 id="2、方法调用中谁调用this指向谁"><a href="#2、方法调用中谁调用this指向谁" class="headerlink" title="2、方法调用中谁调用this指向谁"></a>2、方法调用中<strong>谁调用this指向谁</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//对象方法调用</span><br><span class="line">var person = &#123;</span><br><span class="line">	run: function()&#123;</span><br><span class="line">		console.log(this);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">person.run();//person</span><br><span class="line">var personS = person.run;//相当于给全局变量window添加属性</span><br><span class="line">personS();//window</span><br><span class="line"></span><br><span class="line">//事件绑定</span><br><span class="line">var btn = document.querySelector(&quot;button&quot;);</span><br><span class="line">btn.onclick = function()&#123;</span><br><span class="line">	console.log(this);//btn</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var btn = document.querySelector(&quot;button&quot;);</span><br><span class="line">btn.addEventListener(&apos;click&apos;,function()&#123;</span><br><span class="line">	console.log(this);//btn</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="二、改变this指向"><a href="#二、改变this指向" class="headerlink" title="二、改变this指向"></a>二、改变this指向</h4><h5 id="1、new关键字"><a href="#1、new关键字" class="headerlink" title="1、new关键字"></a>1、new关键字</h5><p><strong>new</strong>关键字可以改变this的指向，将this指向新创建的对象实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//不使用new指向**window**</span><br><span class="line">function Person(name)&#123;</span><br><span class="line">	console.log(this);//window</span><br><span class="line">	this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Person(&apos;Chloe&apos;);</span><br><span class="line"></span><br><span class="line">//使用new指向实例对象</span><br><span class="line">function Person(name)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	console.log(this);//Chloe</span><br><span class="line">	self = this;</span><br><span class="line">&#125;;</span><br><span class="line">var people = new Person(&apos;Chloe&apos;);</span><br><span class="line">console.log(people.name);//&apos;Chloe&apos;</span><br></pre></td></tr></table></figure></p>
+<h5 id="2、call-apply-方法"><a href="#2、call-apply-方法" class="headerlink" title="2、call(),apply()方法"></a>2、call(),apply()方法</h5><p>在特定的作用域中调用函数，等于设置函数体内this对象的值，以扩充函数赖以运行的作用域  </p>
+<h5 id="3、bind-方法"><a href="#3、bind-方法" class="headerlink" title="3、bind()方法"></a>3、bind()方法</h5><p><strong>call(),apply(),bind()方法见另一篇博客：</strong><br><a href="">JS中的call(),apply(),bind()方法</a></p>
+
             </div>
 
             <!-- Post Comments -->
@@ -183,8 +191,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://chloehq.github.io/about/index.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://chloehq.github.io/about/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://chloehq.github.io/2018/03/10/this/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/03/10/this/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
