@@ -114,22 +114,14 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bk001.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >HTML5新特性</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bb2.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >CSS中的flex布局</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h2><h4 id="一、自定义data-属性"><a href="#一、自定义data-属性" class="headerlink" title="一、自定义data-属性"></a>一、自定义data-属性</h4><p>HTML5规范中新增了一个自定义 data- 属性。  </p>
-<h5 id="（1）获取"><a href="#（1）获取" class="headerlink" title="（1）获取"></a>（1）获取</h5><p>  <strong>这些属性集可以通过对象的dataset属性获取，不支持该属性的浏览器可以通过  getAttribute 方法获取。</strong>  </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div data-author=&quot;david&quot; data-time=&quot;2011-06-20&quot; data-comment-num=&quot;10&quot;&gt;...&lt;/div&gt;</span><br><span class="line">div.dataset.commentNum; // 10</span><br></pre></td></tr></table></figure>
-<p> <em>需要注意的是，data-之后的以连字符分割的多个单词组成的属性，获取的时候使用驼峰风格</em><br> 例如：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div id=&quot;content&quot; data-user-list=&quot;user_list&quot;&gt;data-user_list自定义属性 &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//js</span><br><span class="line">var content= document.getElementById(&apos;content&apos;);</span><br><span class="line">alert(content.dataset.userList)</span><br><span class="line">//jquery</span><br><span class="line">$(&apos;#content&apos;).data(&apos;userList&apos;);//读</span><br></pre></td></tr></table></figure></p>
-<h5 id="（2）赋值"><a href="#（2）赋值" class="headerlink" title="（2）赋值"></a>（2）赋值</h5><p>通过js方式给data-*设置值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div id=&quot;content&quot; data-user-list=&quot;user_list&quot;&gt;data-user_list自定义属性 &lt;/div&gt;  </span><br><span class="line">//js</span><br><span class="line">var content= document.getElementById(&apos;content&apos;);</span><br><span class="line">content.dataset.name=&apos;我叫tom&apos;</span><br><span class="line">alert(content.dataset.name)</span><br><span class="line">//jquery</span><br><span class="line">$(&apos;#content&apos;).data(&apos;name&apos;,&apos;我叫tom&apos;);//写</span><br></pre></td></tr></table></figure></p>
-<h5 id="3-使用getAttribute-setAttribute方法"><a href="#3-使用getAttribute-setAttribute方法" class="headerlink" title="(3)使用getAttribute/setAttribute方法"></a>(3)使用getAttribute/setAttribute方法</h5><pre><code>var content= document.getElementById(&apos;content&apos;);        
-content.dataset.birthDate = &apos;19990619&apos;;        
-content.setAttribute(&apos;age&apos;, 25);       
-console.log(content.getAttribute(&apos;data-age&apos;)); //25       
-console.log(content.getAttribute(&apos;data-birth-date&apos;)); //19990519
-</code></pre>
+                <p>容器的属性：<br>1、flex-direction<br>决定主轴的方向，即项目的排列方向<br>2、flex-wrap<br>一条主轴线排不下，如何换行<br>3、flex-flow<br>flex-direction和flex-wrap的简写<br>4、justify-content<br>项目在主轴上如何对齐<br>5、align-items<br>项目在交叉轴上如何对齐<br>6、align-content<br>定义多根轴线的对齐方式</p>
+<p>项目的属性：<br>(1)order<br>定义项目的排列顺序，数值默认0，越小越靠前<br>(2)flex-grow<br>定义项目的放大比例，默认为0（即使有多于空间也不放大）<br>(3)flex-shrink<br>定义项目的缩小比例，默认为1（空间不足时，都将等比例缩放）<br>如果项目A的flex-shrink属性为0，其他项目为1，则空间不足时，A不缩小，其余项目等比缩小。<br>(4)flex-basis<br>定义了在分配多于空间之前，项目占据的主轴空间，默认值auto，即项目原始大小。<br>浏览器根据这个属性，计算主轴是否有多余空间。<br>(5)flex<br>flex-grow,flex-shrink,flex-basis的简写，默认0 1 auto<br>(6)align-self<br>flex-start|flex-end|center|baseline|stretch<br>允许单个项目有与其他项目不同的对齐方式，可覆盖自己的align-items属性。<br>默认值auto，表示继承父元素的align-items，如果没有父元素则等同于stretch</p>
+
             </div>
 
             <!-- Post Comments -->
@@ -191,8 +183,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://chloehq.github.io/2017/12/20/html5/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://chloehq.github.io/2017/12/20/html5/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://chloehq.github.io/2018/03/22/css_flex/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/03/22/css_flex/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
