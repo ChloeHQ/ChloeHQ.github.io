@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bb7.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >DNS解析过程</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="一、DNS解析"><a href="#一、DNS解析" class="headerlink" title="一、DNS解析"></a>一、DNS解析</h2><p>DNS是一种因特网通信协议，由 BIND软件支撑，提供域名与IP地址的解析服务。<br> 那么我们的DNS是怎么解析一个域名的呢？</p>
+<h4 id="网络上归纳的DNS解析步骤如下："><a href="#网络上归纳的DNS解析步骤如下：" class="headerlink" title="网络上归纳的DNS解析步骤如下："></a>网络上归纳的DNS解析步骤如下：</h4><p>1.现在一台计算机，通过ISP接入了互联网，那么ISP就会给这台计算机分配一个DNS服务器，这个DNS服务器不是权威服务器，而是相当于一个代理的dns解析服务器，会帮你迭代权威服务器返回的应答，然后把最终查到IP返回给你。  </p>
+<p>2.现在的我计算机要向这台ISPDNS发起请求查询www.baidu.com这个域名了，(这里其实准确来说不是ISPDNS，而应该是用户自己电脑网络设置里的DNS，并不一定是ISPDNS。比如也有可能你手工设置了8.8.8.8)  </p>
+<p>3.ISPDNS拿到请求后，先检查一下自己的缓存中有没有这个地址，有的话就直接返回。这个时候拿到的ip地址，会被标记为非权威服务器的应答。  </p>
+<p>4.如果缓存中没有的话，ISPDNS会从配置文件里面读取13个根域名服务器的地址（这些地址是不变的，直接在BIND的配置文件中），然后像其中一台发起请求。  </p>
+<p>6.根服务器拿到这个请求后，知道他是com.这个顶级域名下的，所以就会返回com域中的NS记录，一般来说是13台主机名和IP。  </p>
+<p>7.然后ISPDNS向其中一台再次发起请求，com域的服务器发现你这请求是baidu.com这个域的，我一查发现了这个域的NS，那我就返回给你，你再去查。  （目前百度有5台baidu.com的顶级域名服务器）。</p>
+<p>8.ISPDNS不厌其烦的再次向baidu.com这个域的权威服务器发起请求，baidu.com收到之后，查了下有www的这台主机，就把这个IP返回给你了。</p>
+<p>9.然后ISPDNS拿到了之后，将其返回给了客户端，并且把这个保存在高速缓存中。</p>
+<p><strong>光看还不够，动手实践才是真理</strong></p>
+<h2 id="二、我的实践过程"><a href="#二、我的实践过程" class="headerlink" title="二、我的实践过程"></a>二、我的实践过程</h2><p><em>工具简介：</em> NSLookup可以指定查询的类型，可以查到DNS记录的生存时间还可以指定使用那个DNS服务器进行解释。<br>指令详情：<a href="http://tool.chinaz.com/nslookup/" target="_blank" rel="external">http://tool.chinaz.com/nslookup/</a><br>dig是Linux系统下的命令，比nslookup更详尽，可安装在windows系统下运行。<br>安装步骤：<a href="http://nil.uniza.sk/linux-howto/how-install-dig-dns-tool-windows-10" target="_blank" rel="external">http://nil.uniza.sk/linux-howto/how-install-dig-dns-tool-windows-10</a>  </p>
+<h4 id="目标：解析www-baidu-com的IP地址"><a href="#目标：解析www-baidu-com的IP地址" class="headerlink" title="目标：解析www.baidu.com的IP地址"></a>目标：解析www.baidu.com的IP地址</h4><h5 id="1-nslookup查询"><a href="#1-nslookup查询" class="headerlink" title="(1) nslookup查询"></a>(1) nslookup查询</h5><p><img src="http://oz572skeg.bkt.clouddn.com/ns0.png" alt="nslookup查询"><br>可以看到:<br>第一行Server是：DNS服务器的主机名–vdns.whu.edu.cn<br>第二行Address是： 它的IP地址–202.114.64.1<br>下面的Name是：解析的URL–    www.baidu.com<br> Address是：解析出来的IP–119.75.213.61  </p>
+<h5 id="2-dig工具跟踪，dig工具会在本地计算机做迭代，然后记录查询的过程"><a href="#2-dig工具跟踪，dig工具会在本地计算机做迭代，然后记录查询的过程" class="headerlink" title="(2)dig工具跟踪，dig工具会在本地计算机做迭代，然后记录查询的过程"></a>(2)dig工具跟踪，dig工具会在本地计算机做迭代，然后记录查询的过程</h5><p>输入命令：<br><img src="http://oz572skeg.bkt.clouddn.com/dig0.png" alt="dig命令">  </p>
+<p>1&gt;第一步，是从我这台机器的ISPDNS(202.114.64.1)获取到根域服务区的13个IP和主机名[b-j].root-servers.net.。<br><img src="http://oz572skeg.bkt.clouddn.com/dig1.png" alt="dig查询1">  </p>
+<p>2&gt;第二步，向其中一台根域服务器a.root-server.net（198.41.0.4)发送www.baidu.com的查询请求，返回了com.顶级域名的服务器IP和名称。<br><img src="http://oz572skeg.bkt.clouddn.com/dig2.png" alt="dig查询2">  </p>
+<p>3&gt;第三步，向com.域的一台服务器a.gtld-servers.net(192.5.6.30)发送www.baidu.com的查询请求,返回了baidu.com域的服务器地址和名称，百度有四台顶级域的服务器。<br><img src="http://oz572skeg.bkt.clouddn.com/dig3.png" alt="dig查询3">  </p>
+<p>4&gt;第四步，向百度的顶级域名服务器ns3.baidu.com(220.181.37.10)请求www.baidu.com。<br>发现www不是一台主机，而有一个别名www.a.shifen.com，返回别名(www.a.shifen.com)重新发起查询别名的请求。  </p>
+<p>5&gt; local dns再一次去请求com域，得到shifen.com域的服务器（也就是baidu.com的那4台），<br><img src="http://oz572skeg.bkt.clouddn.com/dig4-1.png" alt="dig查询4-1">  </p>
+<p>然后发起www.a.shifen.com的域名解析请求，将a.shifen.com的域名系统名称和IP(nsX.a.shifen.com)返回。<br><img src="http://oz572skeg.bkt.clouddn.com/dig4-2.png" alt="dig查询4-2"><br><img src="http://oz572skeg.bkt.clouddn.com/dig4.png" alt="dig查询4">  </p>
+<p>5&gt;我这台机器到a.shifen.com这个域的域名服务器上查找www.a.shifen.com,从nsX.a.shifen.com中的一台拿到了一条记录www.a.shifen.com的地址（即www.baidu.com的IP地址）。<br>【以上可以用dig +trace www.a.shifen.com】跟踪一下  </p>
+<h2 id="三、步骤总结"><a href="#三、步骤总结" class="headerlink" title="三、步骤总结"></a>三、步骤总结</h2><p><img src="http://oz572skeg.bkt.clouddn.com/dns.png" alt="dns查询流程"><br>①本机首先查看是否有浏览器缓存、操作系统缓存、host文件等。<br>②本机向local dns 请求www.baidu.com<br>③local dns 向根域请求www.baidu.com，根域返回com.域的服务器IP<br>④向com.域请求www.baidu.com，com.域返回baidu.com域的服务器IP<br>⑤向baidu.com请求www.baidu.com，返回别名cname www.a.shifen.com<br>⑥向root域请求www.a.shifen.com<br>⑦向com.域请求www.a.shife.com<br>⑧向shifen.com请求<br>⑨向a.shifen.com域请求<br>⑩拿到www.a.shifen.com的IP<br>最后，local dns返回本机www.baidu.com cname www.a.shifen.com 以及 www.a.shifen.com的IP   </p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chloehq-github'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2018/04/25/dns/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/04/25/dns/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chloehq-github.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chloehq.github.io " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
