@@ -60,7 +60,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a>
+	                        <a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a></li><li><a class="category-link" href="/categories/踩坑札记/">踩坑札记</a>
 	                    </ul>
 	        </li>
 	        
@@ -70,7 +70,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                        <a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
 	                    </ul>
 	        </li>
 	        
@@ -114,12 +114,37 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bb8.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >https协议传输过程</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <h4 id="一、HTTP协议与HTTPS协议"><a href="#一、HTTP协议与HTTPS协议" class="headerlink" title="一、HTTP协议与HTTPS协议"></a>一、HTTP协议与HTTPS协议</h4><p><em>HTTP协议</em>具有以下不足：  </p>
+<ul>
+<li>通信使用明文，内容可能被窃听；  </li>
+<li>无法验证报文的完整性，可能遭遇篡改；</li>
+<li>不验证通信双方的身份，可能遭遇伪装。<br><em>HTTPS协议：</em><br>CIA  </li>
+<li>confidential:隐秘的，你浏览的页面内容如果被人从中间截获，将会是一团乱码；；  </li>
+<li>integrity:完整，你浏览的页面就是原本想要浏览的，服务器收到的数据也是你最初发送的。数据传输不会被黑客篡改或者替换掉；  </li>
+<li>authentication: 认证，连接的网站不会是中途被人伪造的。  </li>
+</ul>
+<p><strong>HTTP+加密+认证+完整性保护=HTTPS</strong>  </p>
+<h4 id="二、HTTPS传输过程抓包实践"><a href="#二、HTTPS传输过程抓包实践" class="headerlink" title="二、HTTPS传输过程抓包实践"></a>二、HTTPS传输过程抓包实践</h4><blockquote>
+<p>实验环境<br>操作系统：win10 x64<br>软件：Wireshark  </p>
+</blockquote>
+<p>SSL建立在可靠传输协议（如TCP）之上，为高层协议提供数据封装、压缩、加密等基本功能的支持。<br>SSL握手协议(SSL Handshake Protocal):用于在实际的数据传输开始时，对通信双方进行身份认证、协商加密算法、交换加密秘钥等。<br>1、建立TCP连接  </p>
+<p>2、秘钥协商过程-TLS握手  </p>
+<h5 id="2-1-客户端发出请求-Client-Hello"><a href="#2-1-客户端发出请求-Client-Hello" class="headerlink" title="2-1 客户端发出请求(Client Hello)"></a>2-1 客户端发出请求(Client Hello)</h5><p>客户端主要向服务器提供以下信息：<br>（1）支持的协议版本——Version:TLS 1.2<br>最后使用什么样的版本，得由服务端决定。如果服务端不支持的话，客户端得降版本。<br>（2）一个客户端生成的随机数——Random<br>最后加密数据用的主密钥，需要客户端和服务端一起协商出来。后面服务端的 Server Hello 阶段也会生成一个随机数,一同用来计算出主密钥。<br>（3）会话ID——Session ID<br>这个 Session ID 是可以重用的，具体看服务端资源和支持情况。如果要复用 Session ID， SSL 服务端需要维护连接的状态和上次握手成功留下的加密信息。如果客户端保存了 Session ID 的信息，发起 SSL 请求的时候会带上。<br>（4）加密套件——Cipher Suites<br>是一个列表，里面每条记录都包含：秘钥交换算法、加密算法等。<br><em>秘钥交换算法</em>是非对称加密，用于在SSL握手阶段交换协商好的对称秘钥；<br><em>加密算法</em>是对称加密，用于后面加密HTTP数据；<br><em>摘要算法</em>对数据进行摘要，后面可以用于对数据进行校验，保证数据一致性，防止中途被篡改。<br>总结：用非对称加密算法来传递对称加密算法的秘钥，同时用摘要算法保证数据完整性。<br>（5）压缩算法——Compression Methods<br>（6）扩展字段——Extension  </p>
+<h5 id="2-2-服务端回应"><a href="#2-2-服务端回应" class="headerlink" title="2-2 服务端回应"></a>2-2 服务端回应</h5><p><strong>(Server Hello)</strong><br>服务端收到客户端的Client Hello后，会反馈自己的配置信息，包括：<br>（1）协议版本——指定此次SSL使用TLS 1.2<br>（2）随机数——Random<br>（3）会话ID——Session ID<br>与上次Client Hello中的sid不一样，说明会话已过期，服务端重新创建了一个会话。<br>（4）加密套件——Cypher Suite<br>从上次的Client Hello 包中的Cipher Suites中选择了一条<em>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</em>。<br>即交换加密算法为ECDHE_RSA，加密算法为AES，摘要算法为SHA。  </p>
+<p><strong>(Certificate)</strong><br>服务端下发证书，客户端验证服务端身份，并取出证书携带的公钥，这个公钥是交换加密算法的公钥，也就是Server Hello阶段指定的ECDHE_RSA。<br><strong>待补充</strong>  </p>
+<p><strong>(Server Key Exchange)</strong><br>秘钥交换阶段（可选），是对Certificate阶段的补充<br>协商DH秘钥参数  </p>
+<p><strong>(Server Hello Done)</strong><br>通知客户端，版本和加密套件协商结束。  </p>
+<p>3、<br>在一些安全级别高的场景，服务端会要求客户端上报证书。  </p>
+<p>4、<br><strong>(Client Key Exchange)</strong><br>客户端不直接生成加密密钥，而是通过之前客户端和服务端生成的随机数又再生成一个随机数，使用前面协商好的EC Diffie-Hellman 算法进行加密传输给服务端。<br>在服务端收到了 Client Key Exchange 消息后，会使用自己的私钥解开这个随机数，加密密钥交换完成。<br><strong>(Change Cipher Spec)</strong><br>客户端通知服务端，后续的报文将会被加密。<br><strong>(Encrypted Handshake Message)</strong>  </p>
+<blockquote>
+<p><a href="https://www.jishux.com/plus/view-603123-1.html" target="_blank" rel="external">参考链接</a></p>
+</blockquote>
+
             </div>
 
             <!-- Post Comments -->

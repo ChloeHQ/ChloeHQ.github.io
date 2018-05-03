@@ -114,43 +114,16 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/ss0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >CSS盒模型及在不同浏览器中的渲染</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/fl0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >报错：Unexpected token ﻿in JSON at position 0</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="一、CSS盒模型"><a href="#一、CSS盒模型" class="headerlink" title="一、CSS盒模型"></a>一、CSS盒模型</h2><blockquote>
-<p>CSS盒模型：就是用于装页面上的元素的矩形区域。一般分为W3C盒子模型和IE盒子模型。都包含有内容(content)、内边距(padding)、边框(boder)和外边距(margin)，这四个部分又都有top,right,bottom和left值。  </p>
-</blockquote>
-<h4 id="1、标准盒子模型"><a href="#1、标准盒子模型" class="headerlink" title="1、标准盒子模型"></a>1、标准盒子模型</h4><p><img src="http://oz572skeg.bkt.clouddn.com/css_box1.jpg" alt="W3C"><br>标准 W3C 盒子模型的范围包括 margin、border、padding、content，并且 content 部分不包含其他部分,属性高(height)和属性宽(width)这两个值不包含 填充(padding)和边框(border)。  </p>
-<h4 id="2、IE盒子模型"><a href="#2、IE盒子模型" class="headerlink" title="2、IE盒子模型"></a>2、IE盒子模型</h4><p><img src="http://oz572skeg.bkt.clouddn.com/css_box0.jpg" alt="IE"><br> 和标准 W3C 盒子模型不同的是：IE 盒子模型的 content 部分包含了 border 和 pading,属性高(height)和属性宽(width)这两个值包含 填充(padding)和边框(border)。  </p>
-<h4 id="3、attention"><a href="#3、attention" class="headerlink" title="3、attention"></a>3、attention</h4><p> 两个盒子模型的外边距会自动合并，并遵循大的外边距，如下图：<br> <img src="http://oz572skeg.bkt.clouddn.com/css_box2.png" alt="margin特性"></p>
-<h2 id="二、盒子模型在不同浏览器中的渲染"><a href="#二、盒子模型在不同浏览器中的渲染" class="headerlink" title="二、盒子模型在不同浏览器中的渲染"></a>二、盒子模型在不同浏览器中的渲染</h2><h4 id="1、将页面设置为标准模式"><a href="#1、将页面设置为标准模式" class="headerlink" title="1、将页面设置为标准模式"></a>1、将页面设置为标准模式</h4><p> <strong>&lt;!DOCTYPE html&gt;</strong><br> 示例：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;  </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;  </span><br><span class="line">&lt;style&gt;  </span><br><span class="line">#box &#123;width:100px;padding:0 10px;border:20px solid blue;margin:70px;&#125;  </span><br><span class="line">&lt;/style&gt;  </span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../js/jquery-1.6.4.js&quot;&gt;&lt;/script&gt;  </span><br><span class="line">&lt;/head&gt;  </span><br><span class="line">&lt;body&gt;  </span><br><span class="line">&lt;div id=&quot;box&quot;&gt;  </span><br><span class="line">&lt;/div&gt;  </span><br><span class="line">&lt;script&gt;  </span><br><span class="line">var box = $(&apos;#box&apos;);  </span><br><span class="line">var boxboxWidth=box[0].offsetWidth;//包括补白、边框和内容宽度  </span><br><span class="line">alert(boxWidth+&quot;:&quot;+box.width());//专指内容的宽度  </span><br><span class="line">&lt;/script&gt;  </span><br><span class="line">&lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>经测试，ie6/7/8/9,ff,chrome,opera均表现一致：<strong>160:100</strong><br>offsetWidth=borderLeft+paddingLeft+contentWidth+paddingRight+borderRight。<br>此时alert的值是160:100。即，各浏览器均认为css中的width就是100px即内容的宽度,和padding+border最终相加结果是：160px。<br><strong>注意</strong>：<br>如果把doctype去掉，即进入“怪异模式”，此时，ie6/7/8的值均为100:40，证明它们认为css中width指的和offsetWidth是同一个值，除了内容的宽度外还都包含补白和边框，而内容的宽度则被压缩为40。而ie9,ff,chrome,opera这样的标准浏览器则依然是160:100。  </p>
-<h4 id="2、CSS3的box-sizing属性"><a href="#2、CSS3的box-sizing属性" class="headerlink" title="2、CSS3的box-sizing属性"></a>2、CSS3的box-sizing属性</h4><h6 id="①语法"><a href="#①语法" class="headerlink" title="①语法"></a>①语法</h6><p><strong>box-sizing: content-box|border-box|inherit;</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">	-moz-box-sizing: border-box; /* FireFox */</span><br><span class="line">	-webkit-box-sizing: border-box; /* Safari */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h6 id="②浏览器支持"><a href="#②浏览器支持" class="headerlink" title="②浏览器支持"></a>②浏览器支持</h6><p>Internet Explorer、Opera 以及 Chrome 支持 box-sizing 属性。<br>Firefox 支持替代的 -moz-box-sizing 属性，<br>Safari 支持替代的 -webkit-box-sizing 属性。  </p>
-<h6 id="③属性值"><a href="#③属性值" class="headerlink" title="③属性值"></a>③属性值</h6><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>content-box</strong></td>
-<td>由CSS2.1规定的宽度高度行为，宽度高度分别应用到元素的内容框。<br>在宽度之外绘制元素的内边距和边框（即标准W3C盒子模型）。</td>
-</tr>
-<tr>
-<td><strong>border-box</strong></td>
-<td>为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。<br>通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。（即IE盒子模型)</td>
-</tr>
-<tr>
-<td><strong>inherit</strong></td>
-<td>规定应从父元素继承 box-sizing 属性的值。</td>
-</tr>
-</tbody>
-</table>
+                <h3 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h3><p>最近在做的一个Vue项目，在从接口获取json格式数据时，用JSON.parse(res)居然会报错<br><em>Unexpected token ﻿ in JSON at position 0</em></p>
+<p><img src="http://oz572skeg.bkt.clouddn.com/json0.png">  </p>
+<p>但是用JSON.parse(res.substr(1))却可以执行成功<br>然而两个字符串乍一看却完全一样，这让我很疑惑。<br><img src="http://oz572skeg.bkt.clouddn.com/json1.png"></p>
+<h3 id="原因探索"><a href="#原因探索" class="headerlink" title="原因探索"></a>原因探索</h3><p>F12仔细查看返回结果，发现在JSON字符串前有一个编码为’\ufeff’的字符<br><img src="http://oz572skeg.bkt.clouddn.com/json2.png">  </p>
+<p>BOM是用来判断文本文件是哪一种Unicode编码的标记，其本身是一个Unicode字符（”\uFEFF”），位于文本文件头部。<br>在不同的Unicode编码中，对应的bom的二进制字节如下：<br>|Bytes|Encoding|<br>|:———-:|:———–:|<br>|FE FF|UTF16BE|<br>|FF FE|UTF16LE|<br>|EF BB|BF UTF8|<br>所以我们可以根据文件头部的几个字节和上面的表格对应来判断该文件是哪种编码形式<br>将其截取掉就可以  </p>
 
             </div>
 
@@ -213,8 +186,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://chloehq.github.io/2018/02/03/boxModel/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://chloehq.github.io/2018/02/03/boxModel/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://chloehq.github.io/2018/05/03/json_position0/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/05/03/json_position0/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
