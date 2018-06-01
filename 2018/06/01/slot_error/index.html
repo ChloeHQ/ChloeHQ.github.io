@@ -70,7 +70,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                        <a class="archive-link" href="/archives/2018/06/">June 2018</a></li><li><a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
 	                    </ul>
 	        </li>
 	        
@@ -114,25 +114,28 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bb1.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Slot插槽-报重复使用默认slot错误</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <hr>
-<p>title: Slot插槽-报重复使用默认slot错误<br>date: 2018-05-30 14:22:01<br>tags: </p>
-<ul>
-<li>错误解决<br>categories: 踩坑札记<br>thumbnail: <a href="http://oz572skeg.bkt.clouddn.com/bb1.jpg" target="_blank" rel="external">http://oz572skeg.bkt.clouddn.com/bb1.jpg</a></li>
-</ul>
-<hr>
-<h4 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h4><p>现在我已经写好了一个组件MyList，可以根据切换卡切换下面文章内容。<br><img src="http://oz572skeg.bkt.clouddn.com/slot_error0.png" alt="mylist componnets"><br>现在有一个页面要复用这个组件，但是需要可以切换排序方式，实现以下效果：<br><img src="http://oz572skeg.bkt.clouddn.com/slot_error1.png" alt="mylist componnets with sorttab">  </p>
-<p>在使用插槽增加排序选项卡时，报如下错误：  </p>
+                <h4 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h4><p><strong>现在我已经写好了一个组件MyList，可以根据切换卡切换下面文章内容。</strong><br><img src="http://oz572skeg.bkt.clouddn.com/slot_error0.png" alt="mylist componnets">  </p>
+<p><strong>现在有一个页面要复用这个组件，但是需要可以切换排序方式，实现以下效果：</strong><br><img src="http://oz572skeg.bkt.clouddn.com/slot_error1.png" alt="mylist componnets with sorttab">  </p>
+<p><strong>在使用插槽增加排序选项卡时，报如下错误：</strong>  </p>
 <blockquote>
 <p>Duplicate presence of slot “default” found in the same render tree - this will likely cause render errors.  </p>
 </blockquote>
-<h4 id="二、原因探寻"><a href="#二、原因探寻" class="headerlink" title="二、原因探寻"></a>二、原因探寻</h4><p>目标是向已经写好的tab切换组件中添加排序（最热|最新)的切换卡。<br>MyList组件模板大致如下：<br><figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tabs&gt;</span><br><span class="line">        &lt;el-tab-pane v-for=&quot;(item,index) in targets&quot; :key=&quot;item.id&quot;&gt;</span><br><span class="line">            &lt;slot name=&quot;sort&quot;&gt;&lt;/slot&gt;</span><br><span class="line">            &lt;!-- 文章列表 --&gt;</span><br><span class="line">            &lt;div class=&quot;hot_post&quot; v-for=&quot;item in articleList&quot; :key=&quot;item.topic_id&quot;&gt;</span><br><span class="line">                &lt;div class=&quot;hot_author&quot;&gt;...&lt;/div&gt;</span><br><span class="line">                &lt;div class=&quot;hot_title&quot;&gt;...&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/el-tab-pane&gt;</span><br><span class="line">        &lt;/el-tabs&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="二、原因探寻"><a href="#二、原因探寻" class="headerlink" title="二、原因探寻"></a>二、原因探寻</h4><p><strong>目标</strong>是向已经写好的tab切换组件中添加排序（最热|最新)的切换卡。  </p>
+<p>MyList组件模板大致如下：<br><figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tabs&gt;</span><br><span class="line">        &lt;el-tab-pane v-for=&quot;(item,index) in targets&quot; :key=&quot;item.id&quot;&gt;</span><br><span class="line">            &lt;slot name=&quot;sort&quot;&gt;&lt;/slot&gt;</span><br><span class="line">            &lt;!-- 文章列表 --&gt;</span><br><span class="line">            &lt;div class=&quot;hot_post&quot; v-for=&quot;item in articleList&quot; :key=&quot;item.topic_id&quot;&gt;</span><br><span class="line">                &lt;div class=&quot;hot_author&quot;&gt;...&lt;/div&gt;</span><br><span class="line">                &lt;div class=&quot;hot_title&quot;&gt;...&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/el-tab-pane&gt;</span><br><span class="line">        &lt;/el-tabs&gt;</span><br></pre></td></tr></table></figure></p>
 <p>引用MyList组件的页面结构大致如下：<br><figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-list&gt;</span><br><span class="line">    &lt;!-- 插槽中的内容——排序方法 --&gt;</span><br><span class="line">    &lt;div v-if=&quot;showSortTab&quot; slot=&quot;sort&quot;&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li v-for=&quot;(item, key) in sortType&quot; :key=&quot;key&quot;&gt;</span><br><span class="line">             &lt;a&gt;&#123;&#123; item &#125;&#125;&lt;/a&gt;</span><br><span class="line">            &lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/my-list&gt;</span><br></pre></td></tr></table></figure></p>
-<p>虽然后来发现是<code>&lt;slot&gt;&lt;/slot&gt;</code>的位置写错了，我把slot误写在了<code>&lt;el-tab-pane/&gt;</code>内部，而el-tab-pane是带有循环的，这样就导致slot被循环使用。只要把slot放在循环之外就可以了。<br>虽然是低级错误，但是在寻找错误的过程中，我运用</p>
+<p>后来发现是&lt;slot/&gt;的位置写错了，我把slot误写在了&lt;el-tab-pane/&gt;<br>内部，而el-tab-pane是带有循环的，这样就导致单个slot被循环使用。只要把slot放在循环之外就可以了。<br>虽然是低级错误，但是在寻找错误的过程中，我顺便学习了一下使用slot。</p>
+<h4 id="三、SLOT插槽"><a href="#三、SLOT插槽" class="headerlink" title="三、SLOT插槽"></a>三、SLOT插槽</h4><blockquote>
+<p>VUE规定父组件模板的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子级作用域内编译。</p>
+</blockquote>
+<p>因此，如果想在父模板中直接访问子组件的数据是不可行的。但是借用slot作用域插槽可以做到这一点。<br>父模板大致如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div  v-if=&quot;listCount&quot; class=&quot;hot-section&quot;&gt;</span><br><span class="line">    &lt;my-list&gt;</span><br><span class="line">        &lt;!-- 插槽中的内容——排序方法 --&gt;</span><br><span class="line">        &lt;div v-if=&quot;showSortTab&quot; slot=&quot;sort&quot; slot-scope=&quot;slotProps&quot;&gt;</span><br><span class="line">            &lt;ul class=&quot;label-list&quot;&gt;</span><br><span class="line">                &lt;li v-for=&quot;(item, key) in sortType&quot; :key=&quot;key&quot; @click=&quot;selectSortType(key)&quot;&gt;&lt;span&gt; &lt;/span&gt;</span><br><span class="line">                    &lt;a&gt;&#123;&#123; slotProps.text &#125;&#125;&lt;/a&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/my-list&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>子组件myList当中嵌入&lt;slot&gt;插槽如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot name=&quot;sort&quot; :text=&quot;xixi&quot;&gt;&lt;/slot&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在子组件的data中定义<strong>text=”xixi”</strong>  </p>
+<p>页面显示效果，可以看到，父组件可以通过作用域插槽得到子组件的数据了。<br><img src="http://oz572skeg.bkt.clouddn.com/scope_slot.png" alt=""></p>
 
             </div>
 
@@ -195,8 +198,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://chloehq.github.io/2018/05/30/slot_error/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://chloehq.github.io/2018/05/30/slot_error/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://chloehq.github.io/2018/06/01/slot_error/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/06/01/slot_error/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
