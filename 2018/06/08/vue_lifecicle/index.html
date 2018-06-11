@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/Vue/">Vue</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a></li><li><a class="category-link" href="/categories/读书笔记/">读书笔记</a></li><li><a class="category-link" href="/categories/踩坑札记/">踩坑札记</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/06/">June 2018</a></li><li><a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/qx3.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Vue的生命周期——待补充</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h4 id="一、Vue生命周期"><a href="#一、Vue生命周期" class="headerlink" title="一、Vue生命周期"></a>一、Vue生命周期</h4><p>在Vue官方文档中有这样一张图，很简洁明了地介绍了Vue的生命周期钩子。<br><a href="https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA" style="color: green;" target="_blank" rel="external">Vue生命周期</a><br>其中有这几个生命周期。<br>beforeCreate,created,beforeMount,Mounted,beforeUpdate,updated,beforeDestroy,destroyed  </p>
+<h4 id="二、源码理解"><a href="#二、源码理解" class="headerlink" title="二、源码理解"></a>二、源码理解</h4><blockquote>
+<p>为了便于理解生命周期，不再用错钩子函数，我看了相关的源码，希望深入理解。<br>Vue本身是构造函数，new Vue(options)时会进行以下操作：  </p>
+<h5 id="1、首先调用其原型上的初始化-init-方法"><a href="#1、首先调用其原型上的初始化-init-方法" class="headerlink" title="1、首先调用其原型上的初始化_init()方法"></a>1、首先调用其原型上的初始化<strong>_init()</strong>方法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype._init = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> vm= <span class="keyword">this</span></span><br><span class="line">    vm._uid = uid++</span><br><span class="line">    <span class="keyword">let</span> startTag, endTag</span><br><span class="line">    vm._isVue = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (options &amp;&amp; options._isComponent) &#123;</span><br><span class="line">      initInternalComponent(vm, options)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      vm.$options = mergeOptions(</span><br><span class="line">        resolveConstructorOptions(vm.constructor),</span><br><span class="line">        options || &#123;&#125;,</span><br><span class="line">        vm</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">    vm._renderProxy = vm</span><br><span class="line">    vm._self = vm</span><br><span class="line">    initLifecycle(vm)</span><br><span class="line">    initEvents(vm)</span><br><span class="line">    initRender(vm)</span><br><span class="line">    callHook(vm, <span class="string">'beforeCreate'</span>)</span><br><span class="line">    initInjections(vm) </span><br><span class="line">    initState(vm)</span><br><span class="line">    initProvide(vm)</span><br><span class="line">    callHook(vm, <span class="string">'created'</span>)</span><br><span class="line">    <span class="keyword">if</span> (vm.$options.el) &#123;</span><br><span class="line">      vm.$mount(vm.$options.el)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>其他不理解的代码可以先放下，重点在于<strong>callHook(vm, ‘beforeCreate’)</strong>和<strong>callHook(vm, ‘created’)</strong>。<br>可以看到在beforeCreate生命周期只是完成了一些事件的初始化，而调用created生命周期前完成了数据状态的初始化，还没有渲染DOM到文档！！因此还不能操作DOM。  </p>
+<h5 id="2、created生命周期钩子之后的initState"><a href="#2、created生命周期钩子之后的initState" class="headerlink" title="2、created生命周期钩子之后的initState()"></a>2、created生命周期钩子之后的initState()</h5><p>在initState()函数中会分别对props,methods,data,computed,watch进行初始化，分别对应：  initProps()|initData()|initComputed|initWatch()<br>在这里，我通过<strong>initData()</strong>来了解Vue的数据响应。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function initData (vm: Component)&#123;</span><br><span class="line">      let data = vm.$options.data</span><br><span class="line">      data = vm._data = typeof data === &apos;function&apos;</span><br><span class="line">        ? getData(data, vm)</span><br><span class="line">        : data || &#123;&#125;</span><br><span class="line">      const keys = Object.keys(data)</span><br><span class="line">      const props = vm.$options.props</span><br><span class="line">      const methods = vm.$options.methods</span><br><span class="line">      let i = keys.length</span><br><span class="line">      while (i--) &#123;</span><br><span class="line">        const key = keys[i]</span><br><span class="line">          proxy(vm, `_data`, key)</span><br><span class="line">      &#125;</span><br><span class="line">      observe(data, true /* asRootData */)</span><br><span class="line">    &#125;</span><br><span class="line">    proxy (target, sourceKey, key) &#123;</span><br><span class="line">      sharedPropertyDefinition.get = function proxyGetter () &#123;</span><br><span class="line">        return this[sourceKey][key]</span><br><span class="line">      &#125;</span><br><span class="line">      sharedPropertyDefinition.set = function proxySetter (val) &#123;</span><br><span class="line">        this[sourceKey][key] = val</span><br><span class="line">      &#125;</span><br><span class="line">      Object.defineProperty(target, key, sharedPropertyDefinition)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里的意思是将data中的key值经过proxy代理，可以在之后直接通过<strong>this.属性</strong>的形式访问;然后通过observe(data)来实现响应式，中心原理是通过Object.defineProperty()进行访问描述符get()|set()函数的改写。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Observer &#123;</span><br><span class="line">  constructor(value) &#123;</span><br><span class="line">    this.value = value </span><br><span class="line">    this.dep = new Dep() </span><br><span class="line">    this.vmCount = 0 </span><br><span class="line">    def(value, &apos;__ob__&apos;, this) </span><br><span class="line">    if (Array.isArray(value)) &#123;</span><br><span class="line">      const augment = hasProto ? protoAugment : copyAugment augment(value, arrayMethods, arrayKeys) </span><br><span class="line">      this.observeArray(value)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      this.walk(value)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  walk(obj: Object) &#123;</span><br><span class="line">    const keys = Object.keys(obj) </span><br><span class="line">    for (let i = 0; i &lt; keys.length; i++) &#123;</span><br><span class="line">      defineReactive(obj, keys[i], obj[keys[i]])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  observeArray(items) &#123;</span><br><span class="line">    for (let i = 0, l = items.length; i &lt; l; i++) &#123;</span><br><span class="line">      observe(items[i])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对data对象的每个属性执行defineReactive():<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">function defineReactive (obj,key,val,customSetter,shallow) &#123;</span><br><span class="line">  const dep = new Dep()</span><br><span class="line">  let childOb = !shallow &amp;&amp; observe(val)</span><br><span class="line">  Object.defineProperty(obj, key, &#123;</span><br><span class="line">    enumerable: true,</span><br><span class="line">    configurable: true,</span><br><span class="line">    get: function reactiveGetter () &#123;</span><br><span class="line">      const value = getter ? getter.call(obj) : val</span><br><span class="line">      if (Dep.target) &#123;</span><br><span class="line">        dep.depend()</span><br><span class="line">        if (childOb) &#123;</span><br><span class="line">          childOb.dep.depend()</span><br><span class="line">          if (Array.isArray(value)) &#123;</span><br><span class="line">            dependArray(value)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return value</span><br><span class="line">    &#125;,</span><br><span class="line">    set: function reactiveSetter (newVal) &#123;</span><br><span class="line">      const value = getter ? getter.call(obj) : val</span><br><span class="line">      if (newVal === value || (newVal !== newVal &amp;&amp; value !== value)) &#123;</span><br><span class="line">        return</span><br><span class="line">      &#125;</span><br><span class="line">      val = newVal</span><br><span class="line">      childOb = !shallow &amp;&amp; observe(newVal)</span><br><span class="line">      dep.notify()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>(1)将数据的属性转为访问器属性，对属性进行递归调用observe()，保证嵌套的属性都可以被监听<br>？？(2)在get()时，添加订阅者；在set()时，通过dep.notify()通知watcher数据发生了改变。  </p>
+<h5 id="3、created-钩子之后，beforeMount-钩子之前"><a href="#3、created-钩子之后，beforeMount-钩子之前" class="headerlink" title="3、created()钩子之后，beforeMount()钩子之前"></a>3、created()钩子之后，beforeMount()钩子之前</h5><p>created()钩子被调用之后，触发created,继续执行vm.$mount(vm.$options.el)。<br>（1）获取模板。进入$mount会先获取挂载el节点，判断是否传入render函数，如果没有则判断是否传入模板template，没有模板的话，会选取外层HTML（<strong>getOuterHTML(el)</strong>）作为模板。<br>（2）有了模板之后，会调用<strong>compileToFunctions()</strong>将将模板(template)字符串编译为渲染函数(render),并将渲染函数赋值给 vm.$options.render 选项。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if (template) &#123;</span><br><span class="line">     const &#123; render, staticRenderFns &#125; = compileToFunctions(template, &#123;</span><br><span class="line">       shouldDecodeNewlines,</span><br><span class="line">       delimiters: options.delimiters,</span><br><span class="line">       comments: options.comments</span><br><span class="line">     &#125;, this)</span><br><span class="line">     options.render = render</span><br><span class="line">     options.staticRenderFns = staticRenderFns</span><br></pre></td></tr></table></figure></p>
+<p>render函数形如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">with (this) &#123;</span><br><span class="line">        return _c(&apos;div&apos;, &#123;</span><br><span class="line">            attrs: &#123;</span><br><span class="line">                &quot;id&quot;: &quot;app&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, [_c(&apos;ol&apos;, _l((this.todos), function(todo) &#123;</span><br><span class="line">            return _c(&apos;li&apos;, [_v(&quot;\n            &quot; + _s(todo.text) + &quot;\n          &quot;)])</span><br><span class="line">        &#125;)), _v(&quot; &quot;), _c(&apos;child&apos;)], 1)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="4、beforeMount-之后，Mounted-之前"><a href="#4、beforeMount-之后，Mounted-之前" class="headerlink" title="4、beforeMount()之后，Mounted()之前"></a>4、beforeMount()之后，Mounted()之前</h5><p>生成render函数之后，会进入mountComponent()函数来挂载组件，在组件实例对象上添加 $el 属性，调用<strong>beforeMount()</strong>钩子函数之后组件将开始挂载；<br>接着会执行vm._wacher = new Watcher(vm, updateComponent, noop)；<br>最后调用<strong>mounted()</strong>钩子，因此在mounted()之前就有了DOM。<br>Watcher()代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">class Watcher &#123;</span><br><span class="line">  constructor (vm,expOrFn,cb,options) &#123;</span><br><span class="line">    this.vm = vm</span><br><span class="line">    vm._watchers.push(this)</span><br><span class="line"></span><br><span class="line">    if (options) &#123;</span><br><span class="line">      this.deep = !!options.deep</span><br><span class="line">      this.user = !!options.user</span><br><span class="line">      this.lazy = !!options.lazy</span><br><span class="line">      this.sync = !!options.sync</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      this.deep = this.user = this.lazy = this.sync = false</span><br><span class="line">    &#125;</span><br><span class="line">    this.cb = cb</span><br><span class="line">    this.id = ++uid // uid for batching</span><br><span class="line">    this.active = true</span><br><span class="line">    this.dirty = this.lazy // for lazy watchers</span><br><span class="line">    this.deps = []</span><br><span class="line">    this.newDeps = []</span><br><span class="line">    this.depIds = new Set()</span><br><span class="line">    this.newDepIds = new Set()</span><br><span class="line">    this.expression = process.env.NODE_ENV !== &apos;production&apos;</span><br><span class="line">      ? expOrFn.toString()</span><br><span class="line">      : &apos;&apos;</span><br><span class="line">    // parse expression for getter</span><br><span class="line">    if (typeof expOrFn === &apos;function&apos;) &#123;</span><br><span class="line">      this.getter = expOrFn</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      this.getter = parsePath(expOrFn)</span><br><span class="line">    &#125;</span><br><span class="line">    this.value = this.lazy</span><br><span class="line">      ? undefined</span><br><span class="line">      : this.get()</span><br><span class="line">  &#125;</span><br><span class="line">  get () &#123;</span><br><span class="line">    pushTarget(this)</span><br><span class="line">    let value</span><br><span class="line">    const vm = this.vm</span><br><span class="line">    value = this.getter.call(vm, vm)</span><br><span class="line">    return value</span><br><span class="line">  &#125;</span><br><span class="line">  addDep (dep: Dep) &#123;</span><br><span class="line">    const id = dep.id</span><br><span class="line">    if (!this.newDepIds.has(id)) &#123;</span><br><span class="line">      this.newDepIds.add(id)</span><br><span class="line">      this.newDeps.push(dep)</span><br><span class="line">      if (!this.depIds.has(id)) &#123;</span><br><span class="line">        dep.addSub(this)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  evaluate () &#123;</span><br><span class="line">    this.value = this.get()</span><br><span class="line">    this.dirty = false</span><br><span class="line">  &#125;</span><br><span class="line">  depend () &#123;</span><br><span class="line">    let i = this.deps.length</span><br><span class="line">    while (i--) &#123;</span><br><span class="line">      this.deps[i].depend()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>执行new Watcher()时，先pushTarget(this)给Dep.target添加静态属性this，然后执行this.getter.call(vm,vm)<br>this.getter其实就是传入的updateComponent()函数：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//vm._render 函数的作用是调用 vm.$options.render 函数并返回生成的虚拟节点(vnode)</span><br><span class="line">//vm._update 函数的作用是把 vm._render 函数生成的虚拟节点渲染成真正的 DOM</span><br><span class="line">  let updateComponent = () =&gt; &#123;</span><br><span class="line">      vm._update(vm._render(), hydrating)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>①先调用vm._render()函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype._render = function ()&#123;</span><br><span class="line">  const vm = this</span><br><span class="line">  const &#123;render,staticRenderFns,_parentVnode&#125; = vm.$options</span><br><span class="line">  let vnode = render.call(vm._renderProxy, vm.$createElement)</span><br><span class="line">  return vnode</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在beforeMount()之前就编译好了render函数，执行时，通过获取全局this上的属性，触发相应的get方法，这时Dep.target已经存在静态属性，Wacher实例了，因此相应的dep实例会收集对应的Watcher实例。<br>执行render函数之后，会返回vnode.<br>②得到vnode后，轮到vm._update()执行了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype._update = function (vnode, hydrating) &#123;</span><br><span class="line">    const vm: Component = this</span><br><span class="line">    if (vm._isMounted) &#123;</span><br><span class="line">      callHook(vm, &apos;beforeUpdate&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">    const prevEl = vm.$el</span><br><span class="line">    const prevVnode = vm._vnode</span><br><span class="line">    const prevActiveInstance = activeInstance</span><br><span class="line">    activeInstance = vm</span><br><span class="line">    vm._vnode = vnode</span><br><span class="line">    if (!prevVnode) &#123;</span><br><span class="line">      vm.$el = vm.__patch__(</span><br><span class="line">        vm.$el, vnode, hydrating, false,</span><br><span class="line">        vm.$options._parentElm,</span><br><span class="line">        vm.$options._refElm</span><br><span class="line">      )</span><br><span class="line">      vm.$options._parentElm = vm.$options._refElm = null</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      vm.$el = vm.__patch__(prevVnode, vnode)</span><br><span class="line">    &#125;</span><br><span class="line">    activeInstance = prevActiveInstance</span><br><span class="line">    if (prevEl) &#123;</span><br><span class="line">      prevEl.__vue__ = null</span><br><span class="line">    &#125;</span><br><span class="line">    if (vm.$el) &#123;</span><br><span class="line">      vm.$el.__vue__ = vm</span><br><span class="line">    &#125;</span><br><span class="line">    if (vm.$vnode &amp;&amp; vm.$parent &amp;&amp; vm.$vnode === vm.$parent._vnode) &#123;</span><br><span class="line">      vm.$parent.$el = vm.$el</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>有两个patch()函数。如果是首次渲染，就执行<strong>vm.patch(vm.$el,vnode)</strong>，根据vnode递归创建对应元素，形成真实DOM。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(vm.$vnode==null) &#123;</span><br><span class="line">  vm._isMounted = true;</span><br><span class="line">  callHook(vm, &apos;mounted&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>会调用<strong>mounted</strong>钩子。<br>如果有了preVnode,说明不是首次渲染，就执行<strong>vm.patch(prevVnode, vnode)</strong>。  </p>
+<h5 id="5、beforeUpdate"><a href="#5、beforeUpdate" class="headerlink" title="5、beforeUpdate()"></a>5、beforeUpdate()</h5><p>当改变属性值时,会触发对应的属性的set方法,通知之前收集的Watcher实例执行,重新计算render,当发现_isMounted已经置为true后，会调用beforeUpdate()钩子</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chloehq-github'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2018/06/08/vue_lifecicle/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/06/08/vue_lifecicle/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chloehq-github.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chloehq.github.io " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
