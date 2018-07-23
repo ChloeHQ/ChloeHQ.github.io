@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/Vue/">Vue</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a></li><li><a class="category-link" href="/categories/读书笔记/">读书笔记</a></li><li><a class="category-link" href="/categories/踩坑札记/">踩坑札记</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a></li><li><a class="archive-link" href="/archives/2018/06/">June 2018</a></li><li><a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/bb8.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >不常用到的htmL元素方法（上）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <blockquote>
+<p>最近看到一篇很有意思的文章，原文作者是David Gilbertson.<br>其中介绍了我们平时不常用的JS操作DOM的方法，看过后确实发现部分很方便却冷门，因此萌生了代码验证以及笔记记录的念头。</p>
+</blockquote>
+<h5 id="1、table的方法"><a href="#1、table的方法" class="headerlink" title="1、table的方法"></a>1、table的方法</h5><p><strong><table></table></strong>是很常见的表格元素，有的时候会用它来进行页面布局，但其实原来它还自带一些精巧的方法，可以用于创建表格。<br>(1)一般情况下，我们会使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.createElement()</span><br></pre></td></tr></table></figure></p>
+<p>方法来创建表格，并设置其innerHTML或者创建tr,td元素然后通过appendChild()方法来添加行和单元格。<br>(2)运用一些冷门的方法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">table.insertRow([index])   ......    插入一个tr  </span><br><span class="line">tr.insertCell(index)   ......    插入一个td  </span><br><span class="line">table.createCaption()   ......    table内创建一个table标题  </span><br><span class="line">table.createTHead()   ......    table内创建thead标签  </span><br><span class="line">table.createTFoot()   ......    标签内创建tfoot标签  </span><br><span class="line">table.deleteRow(index)   ......    删除一行tr  </span><br><span class="line">table.deleteCaption()   ......    删除表格标题  </span><br><span class="line">table.deleteTHead()   ......    删除表格thead标签元素  </span><br><span class="line">table.deleteTFoot()   ......    删除表格的tfoot标签元素</span><br></pre></td></tr></table></figure></p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const tableEl = document.querySelector(&apos;table&apos;);</span><br><span class="line"></span><br><span class="line">const title = tableEl.createCaption();</span><br><span class="line">title.textContent = &apos;Title&apos;;</span><br><span class="line"></span><br><span class="line">const headerRow = tableEl.createTHead().insertRow();</span><br><span class="line">headerRow.insertCell().textContent = &apos;Name&apos;;</span><br><span class="line">headerRow.insertCell().textContent = &apos;age&apos;;</span><br><span class="line">headerRow.insertCell().textContent = &apos;Location&apos;;</span><br><span class="line"></span><br><span class="line">const newRow = tableEl.insertRow();</span><br><span class="line">newRow.insertCell().textContent = &apos;Chloe&apos;;</span><br><span class="line">newRow.insertCell().textContent = &apos;20&apos;;</span><br><span class="line">newRow.insertCell().textContent = &apos;Wuhan&apos;;</span><br></pre></td></tr></table></figure></p>
+<h5 id="2、hidden"><a href="#2、hidden" class="headerlink" title="2、hidden"></a>2、hidden</h5><p>隐藏元素时，我过去经常用 myElement.style.display = ‘none’这种方法，其实可以只需调用 myElement.hidden = true ，即可实现元素隐藏的功能。  </p>
+<h5 id="3、toggle"><a href="#3、toggle" class="headerlink" title="3、toggle()"></a>3、toggle()</h5><p>通常情况下，为元素添加或删除某个 class，我们会使用if判断语句，但是还有另外更简洁的做法——myElement.classList.toggle(‘some-class’)。<br>正确的方式是为 toggle 方法传入第二个参数，如果该参数返回 true ，则指定的 class 就会添加至元素上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">el.classList.toggle(&apos;some-orange-class&apos;, theme === &apos;orange&apos;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="4、querySelector"><a href="#4、querySelector" class="headerlink" title="4、querySelector()"></a>4、querySelector()</h5><p>其实这个方法大多数的人应该都知道，毕竟出现在犀牛书和高程上。但出乎我意料的是这个方法竟然可以使用在任意元素上。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myElement.querySelector(&apos;.my-class&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>会返回在 myElement 的子代中包含 my-class 这个 class 的所有元素。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"i1"</span> <span class="attr">class</span>=<span class="string">"c1 c2"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"i2"</span> <span class="attr">class</span>=<span class="string">"c1 c3"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    let odiv = document.querySelector('#div1');</span></span><br><span class="line"><span class="undefined">    let oipt = odiv.querySelectorAll('.c1');</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="5、closest-‘-‘"><a href="#5、closest-‘-‘" class="headerlink" title="5、closest(‘ ‘)"></a>5、closest(‘ ‘)</h5><p>该方法可在任意元素上使用，能够向上查找元素的树型结构，可以理解为querySelector()的逆向方法。例如：<br><figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;div1&quot;&gt;</span><br><span class="line">        &lt;input id=&quot;i1&quot; class=&quot;c1 c2&quot;&gt;</span><br><span class="line">        &lt;input id=&quot;i2&quot; class=&quot;c1 c3&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let ipt1 = document.querySelector(&apos;.c2&apos;);</span><br><span class="line">        let ipt2 = ipt1.closest(&apos;div&apos;).querySelector(&apos;.c3&apos;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h5 id="6、matches"><a href="#6、matches" class="headerlink" title="6、matches()"></a>6、matches()</h5><p>在需要检查某个元素是否包括一个特定的 class时，我一般会直接用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (myElement.className.indexOf(&apos;class1&apos;) &gt; -1) &#123;</span><br><span class="line">    ......</span><br></pre></td></tr></table></figure></p>
+<p>这篇文章让我了解了一个更好地方式——<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (myElement.matches(&apos;.some-class&apos;)) &#123;</span><br><span class="line">  ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chloehq-github'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2018/07/07/js_function1/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/07/07/js_function1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chloehq-github.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chloehq.github.io " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
