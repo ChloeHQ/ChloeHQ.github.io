@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithm/">Algorithm</a></li><li><a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/Vue/">Vue</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a></li><li><a class="category-link" href="/categories/读书笔记/">读书笔记</a></li><li><a class="category-link" href="/categories/踩坑札记/">踩坑札记</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a></li><li><a class="archive-link" href="/archives/2018/06/">June 2018</a></li><li><a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/xt0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >链表中环的入口节点</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <blockquote>
+<p>今天在做题的时候，遇到了一道看似“很简单”的链表题，从简单做法到探索数学规律，还是花了一定功夫的，因此想记录下来~  </p>
+</blockquote>
+<p><strong>题目描述：</strong>给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null。<br>链表节点的数据结构如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ListNode</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.val = x;</span><br><span class="line">    <span class="keyword">this</span>.next = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="一、简易版"><a href="#一、简易版" class="headerlink" title="一、简易版"></a>一、简易版</h4><p>看到这个题目，最先蹦入我脑子里的就是遍历链表，然后给每个遍历过的节点一个标识位，下次如果再遇到它，那就是入口节点了，迅速写出代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyEntryNodeOfLoop1</span>(<span class="params">pHead</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!pHead) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">if</span>(pHead.next === <span class="literal">null</span>) <span class="keyword">return</span> pHead.val;</span><br><span class="line">    <span class="keyword">let</span> pIndex = pHead;</span><br><span class="line">    <span class="comment">//标识位</span></span><br><span class="line">    pHead.visited = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span>(pIndex.next)&#123;</span><br><span class="line">        <span class="keyword">let</span> next = pIndex.next;</span><br><span class="line">        <span class="built_in">console</span>.log(next)</span><br><span class="line">        <span class="comment">//被访问过</span></span><br><span class="line">        <span class="keyword">if</span>(next.visited)&#123;</span><br><span class="line">            <span class="keyword">return</span> next.val;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            next.visited = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        pIndex = next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后我开始思考，是否可以不用加标识位，就可以识别出环的入口节点呢？这时我想到可以用断链法——设置两个指针slowIndex和fastIndex,每次fastIndex不为空的时候，就将其下一个节点赋值给他，同时将上一个节点的next置为null，这样到最后剩下的一个节点一定是环的入口。<br>代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//断链法 适用于确定有环的情况</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">EntryNodeOfLoop2</span>(<span class="params">pHead</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!pHead || pHead.next === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">let</span> slowIndex = pHead;</span><br><span class="line">    <span class="keyword">let</span> fastIndex = pHead.next;</span><br><span class="line">    <span class="keyword">while</span>(fastIndex)&#123;</span><br><span class="line">        slowIndex.next = <span class="literal">null</span>;</span><br><span class="line">        slowIndex = fastIndex;</span><br><span class="line">        fastIndex = fastIndex.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="二、进阶版"><a href="#二、进阶版" class="headerlink" title="二、进阶版"></a>二、进阶版</h4><p>虽然以上两种方法都可以解决题目所述问题，但是它们都会改变原链表的值或者结构，有没有什么方法可以维持原有链表不变呢。我想到在《剑指offer》中其实遇到过一道题——判断链表中是否成环，书中所用方法是设置快慢两个指针，快指针每次前进一步，慢指针每次前进两步，如果成环那么它们一定可以相遇。<br>这个题目是否可以利用这一特点呢？受到牛客网上 <em>求一个大大的offer</em> 小姐姐启发，得出下面的数学推导：<br><img src="http://oz572skeg.bkt.clouddn.com/listCircle.png" alt="链表成环的入口节点" width="50%"><br><em>x</em>: 环前面的路程<br><em>c</em>: 环的长度<br><em>a</em>: 入口到相遇点的距离<br>假设有快慢两个指针： pFast,pSlow<br>快指针每次走两步，慢指针每次一步，这样当它们在B点相遇时：<br>此时慢指针走的路程为 <strong>Sslow</strong> = x + m <em> c + a<br>快指针走的路程为 <strong>Sfast</strong> = x + n </em> c + a<br>由于2S_slow = S_fast，有：<br>2(x+mc+a) = x+nc+a =&gt;<br><strong>x = (n-2m-1)c + c-a</strong>，意思就是 <strong>环前面的路程=多个环的长度+BC之间的距离</strong>，<br>因此 <strong>解决方法</strong>就是当两个指针相遇后，设置一个指针从Head开始遍历链表，另一指针从相遇点开始遍历链表，步长都为1，它们再次相遇时，正好会是环的入口节点C。<br>我把代码用JS写出来，表示如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">EntryNodeOfLoop3</span>(<span class="params">pHead</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!pHead || pHead.next === <span class="literal">null</span> || pHead.next.next === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">//两个指针，快指针每次两步，慢指针每次一步</span></span><br><span class="line">    <span class="keyword">let</span> pSlow = pHead.next;</span><br><span class="line">    <span class="keyword">let</span> pFast = pHead.next.next;</span><br><span class="line">    <span class="keyword">while</span>(pSlow !== pFast)&#123;</span><br><span class="line">        <span class="keyword">if</span>(pFast.next !== <span class="literal">null</span> &amp;&amp; pFast.next.next !== <span class="literal">null</span>)&#123;</span><br><span class="line">            pFast = pFast.next.next;</span><br><span class="line">            pSlow = pSlow.next;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//没有环</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//此刻有环，并且pFast === pSlow</span></span><br><span class="line">    pFast = pHead;</span><br><span class="line">    <span class="keyword">while</span>(pFast !== pSlow)&#123;</span><br><span class="line">        pFast = pFast.next;</span><br><span class="line">        pSlow = pSlow.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//此刻pFast === pSlow并且处于环的入口</span></span><br><span class="line">    <span class="keyword">return</span> pFast.val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chloehq-github'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2018/07/21/algorithm2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/07/21/algorithm2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chloehq-github.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chloehq.github.io " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

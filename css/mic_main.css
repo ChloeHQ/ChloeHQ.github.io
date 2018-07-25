@@ -35,10 +35,10 @@
 	#wrapper {
 		transform: none;
 		padding: 1rem;
-		-moz-transition: opacity 0.5s ease;
-		-webkit-transition: opacity 0.5s ease;
-		-ms-transition: opacity 0.5s ease;
-		transition: opacity 0.5s ease;
+		-moz-transition: opacity 0.2s ease;
+		-webkit-transition: opacity 0.2s ease;
+		-ms-transition: opacity 0.2s ease;
+		transition: opacity 0.2s ease;
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
