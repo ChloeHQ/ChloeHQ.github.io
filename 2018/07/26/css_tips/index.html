@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/fly.png"/>
+	 <link rel="shortcut icon" href="/img/fly.png">
+	
+			
+    <title>
+    Chloe Hwang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HELLO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithm/">Algorithm</a></li><li><a class="category-link" href="/categories/CSS/">CSS</a></li><li><a class="category-link" href="/categories/HTML/">HTML</a></li><li><a class="category-link" href="/categories/JavaScript/">JavaScript</a></li><li><a class="category-link" href="/categories/NETWORK/">NETWORK</a></li><li><a class="category-link" href="/categories/Vue/">Vue</a></li><li><a class="category-link" href="/categories/WEB-SECURE/">WEB SECURE</a></li><li><a class="category-link" href="/categories/计算机网络/">计算机网络</a></li><li><a class="category-link" href="/categories/读书笔记/">读书笔记</a></li><li><a class="category-link" href="/categories/踩坑札记/">踩坑札记</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/07/">July 2018</a></li><li><a class="archive-link" href="/archives/2018/06/">June 2018</a></li><li><a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a></li><li><a class="archive-link" href="/archives/2018/03/">March 2018</a></li><li><a class="archive-link" href="/archives/2018/02/">February 2018</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="前端导航">
+		                前端导航
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/ChloeHQ" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oz572skeg.bkt.clouddn.com/xt1.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >那些我遗漏的CSS特性(1)</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <blockquote>
+<p>一些前端CSS小TIPS总结  </p>
+</blockquote>
+<h4 id="1、position-sticky"><a href="#1、position-sticky" class="headerlink" title="1、position: sticky"></a>1、position: sticky</h4><p>设置 <strong>position: sticky</strong>会让元素在页面滚动时如同在正常流中，但当其滚动到相对于视口的某个特定位置时就会固定在屏幕上，如同fixed一般。这个属性值是一个较新的CSS属性，在浏览器兼容性上会差一些，但在不兼容的浏览器中会被忽略并会退到正常的滚动情况。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item2</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: sticky;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#68DEF0</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样的话具有item2这个class的元素在页面滚动时像是在正常流中，但是当它距离视口10px时，就会固定在屏幕上，它后面的元素会从它下层滑过。<br><span><a href="http://jsbin.com/jerobetaga/edit?html,css,output" style="color:red; cursor: pointer;" target="_blank" rel="external">点击查看JSBin效果</a></span></p>
+<h4 id="2、Flex弹性布局"><a href="#2、Flex弹性布局" class="headerlink" title="2、Flex弹性布局"></a>2、Flex弹性布局</h4><p>弹性盒子（Flexbox）布局是一种一维布局方法，一维的意思是内容是按行或者列来布局。我们可以使用 <strong>display: flex</strong>来将元素变为弹性布局。该容器的直接子元素会变为弹性项（flex item），并按行排列。  </p>
+<h5 id="2-1-弹性布局的轴"><a href="#2-1-弹性布局的轴" class="headerlink" title="2.1 弹性布局的轴"></a>2.1 弹性布局的轴</h5><p>弹性布局的轴有主轴和交叉轴，默认的flex-direction值为row，row代表了文本的行文方向。<br>交叉轴是和主轴垂直的一条轴，如果flex-direction是row并且弹性项是按照行内方向排列的，那么交叉轴就是块级元素的排列方向；如果flex-direction是column那么弹性项就会以块级元素排列的方向排布，然后交叉轴就会变为row。  </p>
+<h5 id="2-2-弹性项的方向和次序"><a href="#2-2-弹性项的方向和次序" class="headerlink" title="2.2 弹性项的方向和次序"></a>2.2 弹性项的方向和次序</h5><p>当然，有很多属性可以决定弹性项的次序——row|row-reverse|column|column-reverse<br>也可以通过order来改变一个弹性项的次序(小的在前），但是有一点容易被遗忘的是：许多人喜欢用键盘操作tab键切换元素，而 <em>tab的顺序是页面内元素在源码中的顺序而非显示顺序</em>  </p>
+<h4 id="3、grid-layout-网格布局"><a href="#3、grid-layout-网格布局" class="headerlink" title="3、grid layout 网格布局"></a>3、grid layout 网格布局</h4><p>CSS网格布局（grid layout）是一种二维布局技术。二维意味着按照行和列来排布内容。为容器元素设置 <strong>display: grid</strong>来实现网格布局，并且使用grid-template-columns和grid-template-rows属性来控制网格中的行与列。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">     <span class="attribute">display</span>: grid;</span><br><span class="line">     <span class="attribute">grid-template-columns</span>: <span class="number">200px</span> <span class="number">200px</span> <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">grid-template-rows</span>: <span class="number">200px</span> <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上述代码创建了一个行列元素大小固定的网格。每个元素都是 200px*200px.<br>可以使用任意的长度单位或百分比来设置行与列，可以使用为网格系统所创造的新的单位——<em>fr</em>。fr是一种弹性单位，它可以指定网格容器内的空间被如何划分。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>grid<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    body &#123;</span></span><br><span class="line"><span class="undefined">         padding: 20px;</span></span><br><span class="line"><span class="undefined">         font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">     * &#123;</span></span><br><span class="line"><span class="undefined">        box-sizing: border-box;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">     p &#123;</span></span><br><span class="line"><span class="undefined">         margin: 0 0 1em 0;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css">     <span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">         display: grid;</span></span><br><span class="line"><span class="undefined">         grid-template-columns: 1fr 1fr 1fr;</span></span><br><span class="line"><span class="undefined">         grid-gap: 20px;</span></span><br><span class="line"><span class="undefined">         width: 500px;</span></span><br><span class="line"><span class="undefined">         border: 5px solid rgb(66,21,18);</span></span><br><span class="line"><span class="css">         <span class="selector-tag">border-radius</span>: <span class="selector-class">.5em</span>;</span></span><br><span class="line"><span class="undefined">         padding: 10px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css">     <span class="selector-class">.container</span> &gt; <span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="undefined">         padding: 10px;</span></span><br><span class="line"><span class="css">         <span class="selector-tag">background-color</span>: <span class="selector-id">#1ECFE5</span>;</span></span><br><span class="line"><span class="css">         <span class="selector-tag">border</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#7781F6</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>5</span><br><span class="line">          <span class="tag">&lt;<span class="name">br</span>&gt;</span>has more content.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>网格会替我们计算与分配空间，我们不需要去计算元素的百分比去适应容器大小。使用fr来创建网格的列使得网格的列可以自适应。  </p>
+<p><em>效果:</em><br><img src="http://oz572skeg.bkt.clouddn.com/cssTips0.png" alt="grid布局用fr作为单位效果展示">  </p>
+<h5 id="3-1基于行、列的基本定位方法"><a href="#3-1基于行、列的基本定位方法" class="headerlink" title="3.1基于行、列的基本定位方法"></a>3.1基于行、列的基本定位方法</h5><p>定位网格元素最简单的方式是使用基于行/列的定位方法，只需告诉浏览器从哪一排到哪一排来进行合并。<br>例如，如果需要一个2*2的网格区域，可以将指定元素从第一行开始到第三行、从第一列开始到第三列，这样就可以覆盖到四个单元格。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">     grid-column-start: 1;</span><br><span class="line">     grid-column-end: 3;</span><br><span class="line">     grid-row-start: 1;</span><br><span class="line">     grid-row-end: 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以用缩写来表示：grid-column和grid-row，其中第一个值代表起始值，第二个值代表结束值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.item &#123;</span><br><span class="line">    grid-column: 1/3;</span><br><span class="line">    grid-row: 1/3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="3-2基于命名区域的定位方法"><a href="#3-2基于命名区域的定位方法" class="headerlink" title="3.2基于命名区域的定位方法"></a>3.2基于命名区域的定位方法</h5><p>可以通过 <em>命名区域</em>（named areas）来定位网格中的元素。如果用这种方式，需要通过设置 <em>grid-area</em>属性给每个元素一个名字，然后在grid容器中通过 <em>grid-template-areas</em>属性的值来描述布局方式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"three"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"four"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"five"</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">     display: grid;</span></span><br><span class="line"><span class="css">     <span class="selector-tag">grid-template-columns</span>: 1<span class="selector-tag">fr</span> 1<span class="selector-tag">fr</span> 1<span class="selector-tag">fr</span> 1<span class="selector-class">.5fr</span>;</span></span><br><span class="line"><span class="undefined">     grid-auto-rows: minmax(50px, auto);</span></span><br><span class="line"><span class="undefined">     grid-gap: 20px;</span></span><br><span class="line"><span class="undefined">     grid-template-areas: "a a a a" "b c c c" ". . d d" "e e d d"</span></span><br><span class="line"><span class="undefined">     width: 500px;</span></span><br><span class="line"><span class="undefined">     border: 5px solid rgb(111,41,97);</span></span><br><span class="line"><span class="undefined">     padding: 10px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"> <span class="selector-class">.container</span> &gt; <span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="undefined">     padding: 10px;</span></span><br><span class="line"><span class="css">     <span class="selector-tag">background-color</span>: <span class="selector-tag">rgba</span>(111,41,97,<span class="selector-class">.3</span>);</span></span><br><span class="line"><span class="css">     <span class="selector-tag">border</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">rgba</span>(111,41,97,<span class="selector-class">.5</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"> <span class="selector-class">.one</span> &#123;</span></span><br><span class="line"><span class="undefined">     grid-area: a;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"> <span class="selector-class">.two</span> &#123;</span></span><br><span class="line"><span class="undefined">     grid-area: b;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"> <span class="selector-class">.three</span> &#123;</span></span><br><span class="line"><span class="undefined">     grid-area: c;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"> <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="undefined">     grid-area: d;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"> <span class="selector-class">.five</span> &#123;</span></span><br><span class="line"><span class="undefined">     grid-area: e;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><span><a href="http://jsbin.com/petoliyano/edit?html,css,output" style="color: red; cursor: pointer;" target="_blank" rel="external">点击查看效果</a></span>  </p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chloehq-github'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chloehq.github.io/2018/07/26/css_tips/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chloehq.github.io/2018/07/26/css_tips/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chloehq-github.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chloehq.github.io " style="border-bottom: none;">Chole</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
